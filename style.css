@@ -696,40 +696,6 @@ a.text-hover:focus:after{
   outline: none;
 }
 
-/* dropdown style  */
-.dropdown-menu {
-  border-radius: 0rem;
-}
-
-.dropdown-item {
-  display: block;
-  width: 100%;
-  padding: 0.25rem 1rem;
-  clear: both;
-  font-weight: 400;
-  color: #212529;
-  font-family: var(--heading-font);
-  text-align: inherit;
-  text-decoration: none;
-  white-space: nowrap;
-  background-color: transparent;
-  border: 0;
-}
-
-.dropdown-toggle::after {
-  border-top: 0em solid;
-  border-right: 0em solid transparent;
-  border-left: 0em solid transparent;
-}
-
-.dropdown-item.active,
-.dropdown-item:active {
-  color: #1e2125;
-  text-decoration: none;
-  background-color: #e9ecef;
-}
-
-
 /* - Offcanvas
 ------------------------------------------------------------- */
 #header-nav .offcanvas.show {
@@ -780,7 +746,7 @@ a.text-hover:focus:after{
 /* 4.2 Intro
 ------------------------------------------------------------- */
 #intro .banner-content {
-  top: 30%;
+  top: 35%; /* change this to move the "we are arrowbotics" text up or down to not block the image */
   left: 15%;
   z-index: 3;
   width: 70%;
