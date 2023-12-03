@@ -723,29 +723,38 @@ a.text-hover:focus:after{
   padding-left: 20px;
 }
 
-.social-media{
-	padding: 10px;
-	display: flex;
-	position: center;
-  align-items: space-around;
-	justify-content:center;
+.social-media {
+  justify-content:center;
+  text-align:center;
+  padding-top: 15px;
 }
 
-.social-media a {
-  margin: 17.5px;
-  font-size: 1.75rem;
-  text-align:center;
-  display: inline-block;
-	color: white;
+.social-media a {  
+  margin: 18px;
+  font-size: 1.5rem;
 }
 
 .social-media a i{
 	cursor: pointer;
+  position: absolute;
 }
 
 .social-media  a:hover {
 	color: var(--primary-color);
 	text-shadow: 0 0 50px var(--primary-color);
+}
+
+.footer-socials {
+  color:black;
+  left: 10px;
+}
+
+.navbar-socials {
+  color: white; 
+}
+
+.center {
+  text-align: center;    
 }
 
 
