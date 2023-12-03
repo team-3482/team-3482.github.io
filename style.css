@@ -846,6 +846,14 @@ button.filter-button.active {
   }
 }
 
+.division-icons {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 27%;
+  margin: 5px;
+}
+
 /* 4.6 Brand Collections
 ------------------------------------------------------------- */
 #sponsors .brand-item {
