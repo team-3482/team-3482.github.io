@@ -10,7 +10,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="keywords" content="3482, Arrowbotics, Westmont Robotics">
     <meta name="description" content="Homepage of Arrowbotics 3482, from Westmont High School">
-    <meta name="og:image" content="media/logo.png">
+    <meta content="https://embed.com/embedimage.png" property="og:image"/>
+    <meta content="#dd3125" data-react-helmet="true" name="theme-color" />
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
@@ -23,6 +24,15 @@
     <link rel = "icon" type = "image/png" href = "media/icon.png">
     <script src="https://kit.fontawesome.com/2869b3acde.js" crossorigin="anonymous"></script>
     <script src="js/modernizr.js"></script>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol xmlns="http://www.w3.org/2000/svg" id="icon-arrow-left" viewBox="0 0 15 15">
+        <path fill="currentColor" fill-rule="evenodd" d="m2.707 8l3.147 3.146l-.708.707L.793 7.5l4.353-4.354l.708.708L2.707 7H14v1H2.707Z" clip-rule="evenodd" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="icon-arrow-right" viewBox="0 0 15 15">
+        <path fill="currentColor" fill-rule="evenodd" d="M9.854 3.146L14.207 7.5l-4.353 4.354l-.708-.708L12.293 8H1V7h11.293L9.146 3.854l.708-.708Z" clip-rule="evenodd" />
+      </symbol>
+    </svg>
   </head>
   <body data-bs-spy="scroll" data-bs-target="#header-nav" tabindex="0">
     <div id="bodywrap" class="overflow-hidden">
@@ -48,24 +58,27 @@
                 <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
               </div>
               <div class="offcanvas-body">
-                <ul id="navbar" class="navbar-nav text-uppercase justify-content-lg-center justify-content-md-end align-items-center flex-grow-1  text-hover">
+                <ul id="navbar" class="navbar-nav font-abzero text-uppercase justify-content-lg-center justify-content-md-end align-items-center flex-grow-1  text-hover">
                   <li class="nav-item me-5">
-                    <a class="nav-link light text-uppercase active p-0" href="#intro">Home</a>
+                    <a class="nav-link light text-uppercase active p-0" href="#home">Home</a>
                   </li>
                   <li class="nav-item me-5">
                     <a class="nav-link light text-uppercase p-0" href="#about">About</a>
                   </li>
                   <li class="nav-item me-5">
-                    <a class="nav-link light text-uppercase p-0" href="#projects">Projects</a>
+                    <a class="nav-link light text-uppercase p-0" href="#robots">Robots</a>
                   </li>
                   <li class="nav-item me-5">
-                    <a class="nav-link light text-uppercase p-0" href="#our-services">Services</a>
+                    <a class="nav-link light text-uppercase p-0" href="#sponsors">Sponsors</a>
                   </li>
                   <li class="nav-item me-5">
-                    <a class="nav-link light text-uppercase p-0" href="#latest-blog">News</a>
+                    <a class="nav-link light text-uppercase p-0" href="#divisions">Divisions</a>
+                  </li>
+                  <li class="nav-item me-5">
+                    <a class="nav-link light text-uppercase p-0" href="#board">Board</a>
                   </li>
                 </ul>
-                <div class="social-media">
+                <div class="social-media navbar-socials">
                   <a href="https://www.instagram.com/team_3482/" target="_blank"><i class='fab fa-instagram'></i></a>
                   <a href="https://github.com/team-3482" target="_blank"><i class="fa-brands fa-github"></i></a>
                   <a href="https://www.youtube.com/@arrowbotics5748" target="_blank"><i class="fa-brands fa-youtube"></i></a>
@@ -76,7 +89,7 @@
           </div>
         </nav>
       </header>
-      <section id="intro">
+      <section id="home">
         <div class="image-holder position-relative">
           <img src="media/group.jpg" alt="banner" class="banner-image" width = "100%">
         </div>
@@ -101,133 +114,136 @@
           </div>
         </div>
       </section>
-      <section id="projects" class="padding-large">
+      <section class="padding-large bg-gray-200">
+        <div class="container" data-aos="fade-up" data-aos-duration="2000">
+          <h3 class="stats-title">Capital City Classic Offseason 2023</h3>
+          <div class="row">
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="counter-info text-center d-flex align-items-end">
+                <div class="counter-number d-flex align-items-center">
+                  <h4 class="timer fw-bold m-0" data-to="100" data-speed="1000">#11</h4>
+                </div>
+                <p class="counter-description text-uppercase ps-2 fw-bold">Qualifier Placement</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="counter-info text-center d-flex align-items-end">
+                <div class="counter-number d-flex align-items-center">
+                  <h4 class="timer fw-bold m-0" data-to="10" data-speed="1000">#5</h4>
+                </div>
+                <p class="counter-description text-uppercase ps-2 fw-bold">Overall Placement</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="counter-info text-center d-flex align-items-end">
+                <div class="counter-number d-flex align-items-center">
+                  <h4 class="timer fw-bold m-0" data-to="100" data-speed="1000">46</h4>
+                </div>
+                <p class="counter-description text-uppercase ps-2 fw-bold">Total Teams</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6">
+              <div class="counter-info text-center d-flex align-items-end">
+                <div class="counter-number d-flex align-items-center">
+                  <h4 class="timer fw-bold m-0" data-to="100" data-speed="1000">86.37</h4>
+                </div>
+                <p class="counter-description text-uppercase ps-2 fw-bold">Avg score</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="robots" class="padding-large">
         <div class="container-fluid">
           <div class="section-header offset-lg-4">
-            <h2 class="text-uppercase mb-3 left-pattern">Our Projects</h2>
-            <h3 class="text-uppercase">Explore our works</h3>
+            <h2 class="text-uppercase mb-3 left-pattern">Robots</h2>
+            <h3 class="text-uppercase">Explore all our bots</h3>
           </div>
-          <div class="projects-isotope">
-            <div class="projects-flters d-flex flex-wrap justify-content-center my-5" >
-              <button class="filter-button active border-0 bg-transparent me-5 mb-3" data-filter="*">All</button>
-              <button class="filter-button border-0 bg-transparent me-5 mb-3" data-filter=".building">Buildings</button>
-              <button class="filter-button border-0 bg-transparent me-5 mb-3" data-filter=".interior">Interior & Exterior</button>
-              <button class="filter-button border-0 bg-transparent me-5 mb-3" data-filter=".renovate">Renovate</button>
-              <button class="filter-button border-0 bg-transparent me-5 mb-3" data-filter=".industry">Industry</button>
-              <button class="filter-button border-0 bg-transparent me-5 mb-3" data-filter=".road">Road</button>
-            </div>
+          <div class="projects-isotope"><br>
             <div class="row isotope-container">
               <div class="col-lg-4 col-md-6 item building">
                 <div class="projects-content mx-auto">
-                  <a href="project-single.html"> <img src="media/projects-item1.jpg" class="reveal-curve-top" alt="building"> </a>
+                  <img src="media/robots/morpheus.png" class="reveal-curve-top img-fluid" alt="Morpheus">
                 </div>
                 <h3 class="fs-3 text-uppercase text-center mt-3 mb-5">
-                  <a href="project-single.html">Outbox creatives building</a>
+                  <p>Morpheus<br>Charged Up 2023 (Off-Season)</p>
                 </h3>
               </div>
               <div class="col-lg-4 col-md-6 item renovate">
                 <div class="projects-content mx-auto">
-                  <a href="project-single.html"> <img src="media/projects-item2.jpg" class="img-fluid" alt="building"> </a>
+                  <img src="media/robots/morpheus.png" class="img-fluid" alt="Kairos">
                 </div>
                 <h3 class="fs-3 text-uppercase text-center mt-3 mb-5">
-                  <a href="project-single.html">Slova private residence</a>
+                  <p>Kairos (placeholder image)<br>Charged Up 2023</p>
                 </h3>
               </div>
               <div class="col-lg-4 col-md-6 item industry">
                 <div class="projects-content mx-auto">
-                  <a href="project-single.html"> <img src="media/projects-item3.jpg" class="img-fluid" alt="building"> </a>
+                  <img src="media/robots/astraea.png" class="img-fluid" alt="Astraea">
                 </div>
                 <h3 class="fs-3 text-uppercase text-center mt-3 mb-5">
-                  <a href="project-single.html">Jaguare garment industry</a>
+                  <p>Astraea<br>Rapid React 2022</p>
                 </h3>
               </div>
               <div class="col-lg-4 col-md-6 item industry">
                 <div class="projects-content">
-                  <a href="project-single.html"> <img src="media/projects-item4.jpg" class="img-fluid" alt="building"> </a>
-                </div>document.getElementById("year").innerHTML = new Date().getFullYear();
+                  <img src="media/robots/aegis.png" class="img-fluid" alt="Aegis">
+                </div>
                 <h3 class="fs-3 text-uppercase text-center mt-3 mb-5">
-                  <a href="project-single.html">Jaguare garment industry</a>
+                  <p>Aegis<br>Deep Space 2019</p>
                 </h3>
               </div>
               <div class="col-lg-4 col-md-6 item road">
                 <div class="projects-content">
-                  <a href="project-single.html"> <img src="media/projects-item5.jpg" class="img-fluid" alt="building"> </a>
+                  <img src="media/robots/ronin.png" class="img-fluid" alt="Rōnin">
                 </div>
                 <h3 class="fs-3 text-uppercase text-center mt-3 mb-5">
-                  <a href="project-single.html">Jaguare garment industry</a>
+                  <p>Rōnin<br>Power Up 2018</p>
                 </h3>
               </div>
               <div class="col-lg-4 col-md-6 item building">
                 <div class="projects-content">
-                  <a href="project-single.html"> <img src="media/projects-item6.jpg" class="img-fluid" alt="building"> </a>
+                  <img src="media/robots/chronos.png" class="img-fluid" alt="Chronos">
                 </div>
                 <h3 class="fs-3 text-uppercase text-center mt-3 mb-5">
-                  <a href="project-single.html">Jaguare garment industry</a>
+                  <p>Chronos<br>Steamworks 2017</p>
                 </h3>
               </div>
               <div class="col-lg-4 col-md-6 item road">
                 <div class="projects-content">
-                  <a href="project-single.html"> <img src="media/projects-item7.jpg" class="img-fluid" alt="building"> </a>
+                  <img src="media/robots/ares.png" class="img-fluid" alt="Ares">
                 </div>
-                <h3 class="fs-3 text-upperdocument.getElementById("year").innerHTML = new Date().getFullYear();case text-center mt-3 mb-5">
-                  <a href="project-single.html">Jaguare garment industry</a>
+                <h3 class="fs-3 text-uppercase text-center mt-3 mb-5">
+                  <p>Ares<br>Stronghold 2016</p>
                 </h3>
               </div>
               <div class="col-lg-4 col-md-6 item interior">
                 <div class="projects-content">
-                  <a href="project-single.html"> <img src="media/projects-item9.jpg" class="img-fluid" alt="building"> </a>
+                  <img src="media/robots/atlas.png" class="img-fluid" alt="Atlas">
                 </div>
                 <h3 class="fs-3 text-uppercase text-center mt-3 mb-5">
-                  <a href="project-single.html">Jaguare garment industry</a>
+                  <p>Atlas<br>Recycle Rush 2015</p>
                 </h3>
               </div>
               <div class="col-lg-4 col-md-6 item interior">
                 <div class="projects-content">
-                  <a href="project-single.html"> <img src="media/projects-item10.jpg" class="img-fluid" alt="building"> </a>
+                  <img src="media/robots/hephaestus.png" class="img-fluid" alt="Hephaestus">
                 </div>
                 <h3 class="fs-3 text-uppercase text-center mt-3 mb-5">
-                  <a href="project-single.html">Jaguare garment industry</a>
+                  <p>Hephaestus<br>Aerial Assist 2014</p>
                 </h3>
               </div>
             </div>
           </div>
         </div>
       </section>
-      <section id="our-services" class="jarallax d-flex align-items-center" style="background-image: url(media/bg-image1.jpg); width: 100%; height: 535px; background-repeat: no-repeat;">
-        <div class="container mt-5" data-aos="fade-up" data-aos-duration="2000">
-          <div class="row">
-            <div class="col-lg-4 col-md-6">
-              <div class="service-item">
-                <h3 class="light fs-1">Building New Homes</h3>
-                <p class="light">Vehicula at eget a arcu neque ultricies.</p>
-                <a href="services-single.html" class="btn-slide btn-medium btn-dark hover-slide-right text-uppercase my-5">
-                  <span>Read More</span>
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="service-item">
-                <h3 class="light fs-1">Designing Spaces</h3>
-                <p class="light">Ultricies liquet tempus vel amet.</p>
-                <a href="services-single.html" class="btn-slide btn-medium btn-dark hover-slide-right text-uppercase my-5">
-                  <span>Read More</span>
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-              <div class="service-item">
-                <h3 class="light fs-1">Road Maintenance</h3>
-                <p class="light">Tempus vel amet eget egestas arcu non.</p>
-                <a href="services-single.html" class="btn-slide btn-medium btn-dark hover-slide-right text-uppercase my-5">
-                  <span>Read More</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="brand-collection" class="padding-large overflow-hidden">
+      <br>
+      <section id="sponsors" class="padding-large overflow-hidden">
         <div class="container" data-aos="fade-up" data-aos-duration="2000">
+          <div class="section-header offset-lg-4">
+            <h2 class="text-uppercase mb-3 left-pattern">Sponsors</h2>
+            <h3 class="text-uppercase">Our 2024 Sponsors</h3>
+          </div><br><br>
           <div class="row justify-content-between">
             <div class="col-lg-3 pb-3">
               <div class="brand-item bg-gray-200">
@@ -240,7 +256,7 @@
               </div>
             </div>
             <div class="col-lg-3 pb-3">
-              <div class="brand-item bg-gradocument.getElementById("year").innerHTML = new Date().getFullYear();y-200">
+              <div class="brand-item bg-gray-200">
                 <img src="media/brand-item3.png" alt="brand">
               </div>
             </div>
@@ -272,13 +288,67 @@
           </div>
         </div>
       </section>
-      <section id="our-team" class="padding-large pt-0">
+      <section id="divisions" class="jarallax d-flex align-items-center" style="background-image: url(media/bg-image1.jpg); width: 100%; height: 535px; background-repeat: no-repeat;">
+        <div class="container mt-5" data-aos="fade-up" data-aos-duration="2000">
+          <div class="section-header offset-lg-4">
+            <h2 class="text-uppercase mb-3 left-pattern" style="color:white;">Divisions</h2>
+            <h3 class="text-uppercase" style="color:white;">How we work</h3><br>
+            <div class="division-icons">
+              <i class="fa-solid fa-wrench fa-2xl"></i>
+              <i class="fa-solid fa-code fa-2xl"></i>
+              <i class="fa-solid fa-cube fa-2xl"></i>
+              <i class="fa-solid fa-plug fa-2xl"></i>
+              <i class="fa-solid fa-people-arrows fa-2xl"></i>
+              <i class="fa-solid fa-money-bills fa-2xl"></i>
+            </div>
+          </div><br><br><br>
+          <div class="row">
+            <div class="col-lg-4 col-md-6">
+              <div class="service-item">
+                <h3 class="light fs-1">Mechanical</h3>
+                <p class="light">Physically cutting, building, and assembling the robot</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="service-item">
+                <h3 class="light fs-1">Software</h3>
+                <p class="light">Writing the code that the robot runs on, including driving and autonomous</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="service-item">
+                <h3 class="light fs-1">CAD</h3>
+                <p class="light">Creating the design of the robot in 3D CAD software</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="service-item">
+                <h3 class="light fs-1">Electrical</h3>
+                <p class="light">Connecting all the components of the robot together</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="service-item">
+                <h3 class="light fs-1">Public Relations</h3>
+                <p class="light">Planning our events, sponsors, and managing our social media accounts</p>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+              <div class="service-item">
+                <h3 class="light fs-1">Finance</h3>
+                <p class="light">Managing our funds from sponsors</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section><br><br><br>
+      <section id="board" class="padding-large pt-0">
         <div class="container" data-aos="fade-up" data-aos-duration="2000">
           <div class="row">
             <div class="swiper-header d-flex flex-wrap justify-content-between mb-3">
               <div class="section-header mb-5 text-uppercase">
-                <h2 class="mb-3 left-pattern">Meet Our Team</h2>
-                <h3>Our professional team</h3>
+                <h2 class="mb-3 left-pattern">board</h2>
+                <h3>Meet the board members</h3>
               </div>
               <div class="swiper-arrow-wrap d-flex">
                 <div class="swiper-arrow border rounded-circle d-flex align-items-center justify-content-center me-3">
@@ -298,334 +368,93 @@
                 <div class="swiper-slide">
                   <div class="team-member position-relative">
                     <div class="image-holder zoom-effect mx-auto">
-                      <img src="media/team-item1.jpg" alt="team member" class="img-fluid">
-                      <ul class="social-links list-unstyled position-absolute">
-                        <li>
-                          <a href="#" class="text-dark">
-                            <svg class="facebook text-primary-500" width="25" height="20" aria-hidden="true">
-                              <use xlink:href="#facebook"></use>
-                            </svg>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="text-dark">
-                            <svg class="twitter text-primary-500" width="25" height="20" aria-hidden="true">
-                              <use xlink:href="#twitter"></use>
-                            </svg>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="text-dark">
-                            <svg class="instagram text-primary-500" width="25" height="20" aria-hidden="true">
-                              <use xlink:href="#instagram"></use>
-                            </svg>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="text-dark">
-                            <svg class="youtube text-primary-500" width="25" height="20" aria-hidden="true">
-                              <use xlink:href="#youtube"></use>
-                            </svg>
-                          </a>
-                        </li>
-                      </ul>
+                      <img src="media/board/board.png" alt="team member" class="img-fluid">
                     </div>
                     <div class="member-info pt-4 text-center">
-                      <h3 class="fs-4 text-uppercase">Yash</h3>
-                      <span class="fs-6">Team President</span>
+                      <h3 class="fs-4 text-uppercase">Yash C</h3>
+                      <span class="fs-6">President</span>
                     </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="team-member position-relative">
                     <div class="image-holder zoom-effect">
-                      <img src="media/team-item2.jpg" alt="team member" class="img-fluid">
-                      <ul class="social-links list-unstyled position-absolute">
-                        <li>
-                          <a href="#" class="text-dark">
-                            <svg class="facebook text-primary-500" width="25" height="20" aria-hidden="true">
-                              <use xlink:href="#facebook"></use>
-                            </svg>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="text-dark">
-                            <svg class="twitter text-primary-500" width="25" height="20" aria-hidden="true">
-                              <use xlink:href="#twitter"></use>
-                            </svg>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="text-dark">
-                            <svg class="instagram text-primary-500" width="25" height="20" aria-hidden="true">
-                              <use xlink:href="#instagram"></use>
-                            </svg>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="text-dark">
-                            <svg class="youtube text-primary-500" width="25" height="20" aria-hidden="true">
-                              <use xlink:href="#youtube"></use>
-                            </svg>
-                          </a>
-                        </li>
-                      </ul>
+                      <img src="media/board/board.png" alt="team member" class="img-fluid">
                     </div>
                     <div class="member-info pt-4 text-center">
-                      <h3 class="fs-4 text-uppercase">Luke</h3>
-                      <span class="fs-6">Head of Software</span>
+                      <h3 class="fs-4 text-uppercase">Knox Friedman</h3>
+                      <span class="fs-6">Co-Head of Mechanical</span>
                     </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="team-member position-relative">
                     <div class="image-holder zoom-effect">
-                      <img src="media/team-item3.jpg" alt="team member" class="img-fluid">
-                      <ul class="social-links list-unstyled position-absolute">
-                        <li>
-                          <a href="#" class="text-dark">
-                            <svg class="facebook text-primary-500" width="25" height="20" aria-hidden="true">
-                              <use xlink:href="#facebook"></use>
-                            </svg>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="text-dark">
-                            <svg class="twitter text-primary-500" width="25" height="20" aria-hidden="true">
-                              <use xlink:href="#twitter"></use>
-                            </svg>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="text-dark">
-                            <svg class="instagram text-primary-500" width="25" height="20" aria-hidden="true">
-                              <use xlink:href="#instagram"></use>
-                            </svg>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="text-dark">
-                            <svg class="youtube text-primary-500" width="25" height="20" aria-hidden="true">
-                              <use xlink:href="#youtube"></use>
-                            </svg>
-                          </a>
-                        </li>
-                      </ul>
+                      <img src="media/board/board.png" alt="team member" class="img-fluid">
                     </div>
                     <div class="member-info pt-4 text-center">
-                      <h3 class="fs-4 text-uppercase">Aki</h3>
+                      <h3 class="fs-4 text-uppercase">Beckett</h3>
+                      <span class="fs-6">Co-Head of Mechanical</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team-member position-relative">
+                    <div class="image-holder zoom-effect">
+                      <img src="media/board/board.png" alt="team member" class="img-fluid">
+                    </div>
+                    <div class="member-info pt-4 text-center">
+                      <h3 class="fs-4 text-uppercase">Luke Hanuska</h3>
+                      <span class="fs-6">Co-Head of Software</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team-member position-relative">
+                    <div class="image-holder zoom-effect">
+                      <img src="media/board/board.png" alt="team member" class="img-fluid">
+                    </div>
+                    <div class="member-info pt-4 text-center">
+                      <h3 class="fs-4 text-uppercase">Daniel C</h3>
+                      <span class="fs-6">Co-Head of Software</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="team-member position-relative">
+                    <div class="image-holder zoom-effect">
+                      <img src="media/board/board.png" alt="team member" class="img-fluid">
+                    </div>
+                    <div class="member-info pt-4 text-center">
+                      <h3 class="fs-4 text-uppercase">Alikesh</h3>
                       <span class="fs-6">Head of Electrical</span>
                     </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="team-member">
-                    <div class="image-holder">
-                      <img src="media/team-item1.jpg" alt="team member" class="img-fluid">
-                      <ul class="social-links list-unstyled position-absolute">
-                        <li>
-                          <a href="#" class="text-dark">
-                            <svg class="facebook text-primary-500" width="25" height="20" aria-hidden="true">
-                              <use xlink:href="#facebook"></use>
-                            </svg>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="text-dark">
-                            <svg class="twitter text-primary-500" width="25" height="20" aria-hidden="true">
-                              <use xlink:href="#twitter"></use>
-                            </svg>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="text-dark">
-                            <svg class="instagram text-primary-500" width="25" height="20" aria-hidden="true">
-                              <use xlink:href="#instagram"></use>
-                            </svg>
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" class="text-dark">
-                            <svg class="youtube text-primary-500" width="25" height="20" aria-hidden="true">
-                              <use xlink:href="#youtube"></use>
-                            </svg>
-                          </a>
-                        </li>
-                      </ul>
+                  <div class="team-member position-relative">
+                    <div class="image-holder zoom-effect">
+                      <img src="media/board/board.png" alt="team member" class="img-fluid">
                     </div>
                     <div class="member-info pt-4 text-center">
-                      <h3 class="fs-4 text-uppercase">William Brown</h3>
-                      <span class="fs-6">Staff</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="testimonials" class="padding-large jarallax" style="background-image: url(media/bg-image2.jpg); width: 100%; height: 808px; background-repeat: no-repeat; background-position: center;">
-        <div class="container mt-5" data-aos="fade-up" data-aos-duration="2000">
-          <div class="row">
-            <div class="section-header mb-5 text-uppercase">
-              <h2 class="light left-pattern">Testimonials</h2>
-              <h3 class="light">What our clients says</h3>
-            </div>
-            <div class="swiper review-swiper light">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="review-item bg-light p-5">
-                    <blockquote class="fs-5">“An excellent and inspiring team"</blockquote>
-                    <div class="author-detail left-pattern">
-                      <div class="name fw-bold">Kelly Garcia</div>
+                      <h3 class="fs-4 text-uppercase">Mia Hanuska</h3>
+                      <span class="fs-6">Co-Head of CAD</span>
                     </div>
                   </div>
                 </div>
                 <div class="swiper-slide">
-                  <div class="review-item bg-light p-5">
-                    <blockquote class="fs-5">“A pellen tesque pretium feugiat vel mobi sagittis lorem habi tasse cursus ipsum quis nec eget facilisis. Quis nibh ut bindum nisl quis placerat proin tortor mattis.” </blockquote>
-                    <div class="author-detail left-pattern">
-                      <div class="name fw-bold">Jonas Müller</div>
+                  <div class="team-member position-relative">
+                    <div class="image-holder zoom-effect">
+                      <img src="media/board/board.png" alt="team member" class="img-fluid">
                     </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="review-item bg-light p-5">
-                    <blockquote class="fs-5">“A pellen tesque pretium feugiat vel mobi sagittis lorem habi tasse cursus ipsum quis nec eget facilisis. Quis nibh ut bindum nisl quis placerat proin tortor mattis.” </blockquote>
-                    <div class="author-detail left-pattern">
-                      <div class="name fw-bold">Lucia Bianchi</div>
+                    <div class="member-info pt-4 text-center">
+                      <h3 class="fs-4 text-uppercase">Kathryn Tanaka</h3>
+                      <span class="fs-6">Co-Head of CAD</span>
                     </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="review-item bg-light p-5">
-                    <blockquote class="fs-5">“A pellen tesque pretium feugiat vel mobi sagittis lorem habi tasse cursus ipsum quis nec eget facilisis. Quis nibh ut bindum nisl quis placerat proin tortor mattis.” </blockquote>
-                    <div class="author-detail left-pattern">
-                      <div class="name fw-bold">Dmitri Abramov</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="our-achievement" class="padding-large bg-gray-200">
-        <div class="container" data-aos="fade-up" data-aos-duration="2000">
-          <div class="row">
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="counter-info text-center d-flex align-items-end">
-                <div class="counter-number d-flex align-items-center">
-                  <h4 class="timer fw-bold m-0" data-to="100" data-speed="1000">780</h4>
-                </div>
-                <p class="counter-description text-uppercase ps-2 fw-bold">Projects done</p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="counter-info text-center d-flex align-items-end">
-                <div class="counter-number d-flex align-items-center">
-                  <h4 class="timer fw-bold m-0" data-to="100" data-speed="1000">127</h4>
-                </div>
-                <p class="counter-description text-uppercase ps-2 fw-bold">Total members</p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="counter-info text-center d-flex align-items-end">
-                <div class="counter-number d-flex align-items-center">
-                  <h4 class="timer fw-bold m-0" data-to="100" data-speed="1000">627</h4>
-                </div>
-                <p class="counter-description text-uppercase ps-2 fw-bold">Happy customers</p>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-6 col-sm-6">
-              <div class="counter-info texdocument.getElementById("year").innerHTML = new Date().getFullYear();t-center d-flex align-items-end">
-                <div class="counter-number d-flex align-items-center">
-                  <h4 class="timer fw-bold m-0" data-to="10" data-speed="1000">28</h4>
-                </div>
-                <p class="counter-description text-uppercase ps-2 fw-bold">Awards</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section id="latest-blog" class="padding-large">
-        <div class="container" data-aos="fade-up" data-aos-duration="2000">
-          <div class="row">
-            <div class="section-header text-uppercase">
-              <h2 class="left-pattern">News Articles</h2>
-              <h3>Read Latest Articles</h3>
-            </div>
-            <div class="post-grid d-flex flex-wrap justify-content-center mt-5">
-              <div class="col-lg-4 col-md-6 mb-3">
-                <div class="card-item position-relative">
-                  <div class="card border-0">
-                    <div class="card-image">
-                      <img src="media/post-item1.jpg" alt="" class="img-fluid">
-                    </div>
-                  </div>
-                  <div class="card-body p-3 position-absolute">
-                    <div class="meta-title">
-                      <em class="light">Feb 1, 2023 / Buil,dings</em>
-                    </div>
-                    <h3 class="card-title fs-3 text-uppercase mt-3 light">
-                      <a href="blog-single.html">Top 10 mindblowing architecture buildings in the world</a>
-                    </h3>
-                    <p class="light">It’s normal to feel anxiety, worry and grief any time you’re diagnosed with a condition that’s certainly true... <a href="blog-single.html" class="text-decoration-underline">document.getElementById("year").innerHTML = new Date().getFullYear();
-                        <em>Read more</em>
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6 mb-3">
-                <div class="card-item position-relative">
-                  <div class="card border-0">
-                    <div class="card-image">
-                      <img src="media/post-item2.jpg" alt="" class="img-fluid">
-                    </div>
-                  </div>
-                  <div class="card-body p-3 position-absolute">
-                    <div class="meta-title">
-                      <em class="light">Feb 12, 2023 / Construction</em>
-                    </div>
-                    <h3 class="card-title fs-3 text-uppercase mt-3 light">
-                      <a href="blog-single.html">Amazing technologies that helped to create creatives works</a>
-                    </h3>
-                    <p class="light">It’s normal to feel anxiety, worry and grief any time you’re diagnosed with a condition that’s certainly true... <a href="blog-single.html" class="text-decoration-underline">
-                        <em>Read more</em>
-                      </a>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-lg-4 col-md-6">
-                <div class="card-item position-relative">
-                  <div class="card border-0">
-                    <div class="card-image">
-                      <img src="media/post-item3.jpg" alt="" class="img-fluid">
-                    </div>
-                  </div>
-                  <div class="card-body p-3 position-absolute">
-                    <div class="meta-title">
-                      <em class="light">Feb 30, 2023 / Company</em>
-                    </div>
-                    <h3 class="card-title fs-3 text-uppercase mt-3 light">
-                      <a href="blog-single.html">100 best construction company around the world</a>
-                    </h3>
-                    <p class="light">It’s normal to feel anxiety, worry and grief any time you’re diagnosed with a condition that’s certainly true... <a href="blog-single.html" class="text-decoration-underline">
-                        <em>Read more</em>
-                      </a>
-                    </p>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="btn-center">
-            <a href="blog.html" class="btn-slide btn-medium btn-dark hover-slide-right text-uppercase mt-5">
-              <span>All articles</span>
-            </a>
           </div>
         </div>
       </section>
@@ -642,11 +471,18 @@
             <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
               <div class="footer-menu">
                 <ul class="menu-list list-unstyled">
+                  <li class="pb-2 center"><strong>Contact</strong></li>
                   <li class="pb-2">4805 Westmont Ave, Campbell, CA 95008</li>
                   <li class="pb-2">+1 (408) 6263-406</li>
                   <li class="pb-2">
                     <a href="mailto:">team3482@gmail.com</a>
                   </li>
+                  <div class="social-media footer-socials" style="color:black;">
+                    <a href="https://www.instagram.com/team_3482/" target="_blank"><i class='fab fa-instagram'></i></a>
+                    <a href="https://github.com/team-3482" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.youtube.com/@arrowbotics5748" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/Team3482/" target="_blank"><i class="fab fa-facebook"></i></a>
+                  </div>
                 </ul>
               </div>
             </div>
@@ -664,39 +500,6 @@
                 <a href="https://templatesjungle.com/downloads/boldiz-contractor-building-bootstrap-website-template/">HTML Template</a>
               </strong>
             </p>
-          </div>
-          
-          <div class="col-lg-6">
-            <ul class="social-links list-unstyled d-flex justify-content-lg-end">
-              <li class="pe-3">
-                <a href="#">
-                  <svg class="facebook text-primary-500" width="25" height="20" aria-hidden="true">
-                    <use xlink:href="#facebook"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="pe-3">
-                <a href="#">
-                  <svg class="twitter text-primary-500" width="25" height="20" aria-hidden="true">
-                    <use xlink:href="#twitter"></use>
-                  </svg>
-                </a>
-              </li>
-              <li class="pe-3">
-                <a href="#">
-                  <svg class="instagram text-primary-500" width="25" height="20" aria-hidden="true">
-                    <use xlink:href="#instagram"></use>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <svg class="youtube text-primary-500" width="25" height="20" aria-hidden="true">
-                    <use xlink:href="#youtube"></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
           </div>
         </div>
       </div>

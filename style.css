@@ -723,29 +723,38 @@ a.text-hover:focus:after{
   padding-left: 20px;
 }
 
-.social-media{
-	padding: 10px;
-	display: flex;
-	position: center;
-  align-items: space-around;
-	justify-content:center;
+.social-media {
+  justify-content:center;
+  text-align:center;
+  padding-top: 15px;
 }
 
-.social-media a {
-  margin: 17.5px;
-  font-size: 1.75rem;
-  text-align:center;
-  display: inline-block;
-	color: white;
+.social-media a {  
+  margin: 18px;
+  font-size: 1.5rem;
 }
 
 .social-media a i{
 	cursor: pointer;
+  position: absolute;
 }
 
 .social-media  a:hover {
 	color: var(--primary-color);
 	text-shadow: 0 0 50px var(--primary-color);
+}
+
+.footer-socials {
+  color:black;
+  left: 10px;
+}
+
+.navbar-socials {
+  color: white; 
+}
+
+.center {
+  text-align: center;    
 }
 
 
@@ -775,7 +784,7 @@ a.text-hover:focus:after{
 
 /* 4.2 Intro
 ------------------------------------------------------------- */
-#intro .banner-content {
+#home .banner-content {
   top: 35%; /* change this to move the "we are arrowbotics" text up or down to not block the image */
   left: 15%;
   z-index: 3;
@@ -784,13 +793,13 @@ a.text-hover:focus:after{
 }
 
 @media (max-width: 1399px) {
-  #intro .banner-content {
+  #home .banner-content {
     left: 10%;
   }
 }
 
 @media (max-width: 699px) {
-  #intro img.banner-image {
+  #home img.banner-image {
     width: 100%;
     height: 650px;
     object-fit: cover;
@@ -837,16 +846,24 @@ button.filter-button.active {
   }
 }
 
+.division-icons {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  width: 27%;
+  margin: 5px;
+}
+
 /* 4.6 Brand Collections
 ------------------------------------------------------------- */
-#brand-collection .brand-item {
+#sponsors .brand-item {
   display: flex;
   justify-content: center;
   padding: 50px 0;
   transition: 0.9s ease-in-out;
 }
 
-#brand-collection .brand-item:hover {
+#sponsors .brand-item:hover {
   background-color: #000;
 }
 
@@ -890,38 +907,22 @@ button.filter-button.active {
   transform: rotatey(0deg);
 }
 
-#our-team .swiper-arrow {
+#board .swiper-arrow {
   width: 50px;
   height: 50px;
 }
 
-#our-team .swiper-arrow.border:hover {
+#board .swiper-arrow.border:hover {
   border-color: var(--dark-color) !important;
-}
-
-/* 4.8 Testimonial
-------------------------------------------------------------- */
-.author-detail .name {
-  padding-left: 65px;
-}
-
-#testimonials .swiper.review-swiper {
-  padding-bottom: 50px;
-}
-
-#testimonials .swiper-horizontal>.swiper-pagination-bullets {
-  bottom: -5px;
-}
-
-#testimonials .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet {
-  background: var(--light-color);
-  width: 10px;
-  height: 10px;
-  margin-right: 20px;
 }
 
 /* 4.9 Our Achievement
 ------------------------------------------------------------- */
+.stats-title {
+  text-align: center;
+  margin-bottom: 1.5em;
+}
+
 .counter-number h4.timer {
   font-size: 6.4em;
   color: var(--gray-color-400);
@@ -932,143 +933,6 @@ button.filter-button.active {
   color: var(--primary-color);
   text-shadow: 0 0 50px var(--primary-color);
 }
-
-/* 4.10 Latest Blog
-------------------------------------------------------------- */
-.post-grid .card-item .card-body {
-  bottom: -84px;
-  transition: 0.8s ease-in-out;
-  width: 85%;
-}
-
-.post-grid .card-item .card-body h3 {
-  line-height: 1.3;
-}
-
-.post-grid .card-item .card-body p {
-  opacity: 0;
-  transition: 0.9s ease-in-out;
-}
-
-.post-grid .card-item:hover .card-body {
-  bottom: 20px;
-}
-
-.post-grid .card-item:hover .card-body p {
-  opacity: 1;
-}
-
-
-/*--------------------------------------------------------------
-Blog page style start
---------------------------------------------------------------*/
-.post-grid .card-item .card-body p.blog-paragraph {
-  opacity: 1;
-}
-
-.pagination {
-  --bs-pagination-active-bg: var(--dark-color);
-  --bs-pagination-active-border-color: var(--dark-color);
-}
-
-.page-item.active .page-link {
-  background-color: var(--dark-color);
-  border-color: var(--dark-color);
-}
-
-.page-link {
-  color: var(--dark-color);
-}
-
-.page-link:focus {
-  color: var(--dark-color);
-  background-color: #e9ecef;
-  box-shadow: 0 0 0 0.25rem var(--gray-color-400);
-}
-
-.page-link:hover {
-  color: var(--dark-color);
-}
-
-
-/*--------------------------------------------------------------
-Blog-single page style start
---------------------------------------------------------------*/
-.form-control {
-  border-radius: 0px;
-}
-
-.form-control:focus {
-  color: var(--bs-body-color);
-  background-color: var(--bs-body-bg);
-  border-color: var(--bs-gray-dark);
-  outline: 0;
-  box-shadow: none;
-}
-
-/*--------------------------------------------------------------
-FAQs page style start
---------------------------------------------------------------*/
-.accordion .accordion-item {
-  border-bottom: 1px solid var(--bs-gray-300) !important;
-}
-
-.accordion-button:focus {
-  box-shadow: none;
-}
-
-.accordion-button:not(.collapsed) {
-  color: var(--dark-color);
-  background-color: transparent;
-  box-shadow: none;
-}
-
-.accordion .accordion-button::after {
-  content: "";
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='plus' viewBox='0 0 16 16'%3E%3Cpath d='M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z'/%3E%3C/svg%3E");
-  background-repeat: no-repeat;
-  background-size: 2rem;
-  width: 1.5rem;
-  height: 1.5rem;
-  position: relative;
-}
-
-.accordion .accordion-button:not(.collapsed)::after {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='minus' viewBox='0 0 16 16'%3E%3Cpath d='M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z'/%3E%3C/svg%3E");
-  transform: rotate(0deg);
-  position: relative;
-}
-
-
-/*--------------------------------------------------------------
-reviews page style start
---------------------------------------------------------------*/
-.reviews-components {
-  border: 1px solid var(--light-text-color);
-  box-shadow: 6px 6px 5px rgba(12, 12, 12, 0.01);
-  border-radius: 9px;
-}
-
-
-/*--------------------------------------------------------------
-  Price page style
-  --------------------------------------------------------------*/
-  .plan-post {
-    border: 1px solid var(--accent-color);
-  }
-  
-  span.price-tick {
-    color: var(--accent-color);
-  }
-  
-  .price-option {
-    height: 320px;
-  }
-  
-  .recommend-price {
-    background: var(--accent-color);
-  }
-
 
 
 /*--------------------------------------------------------------
