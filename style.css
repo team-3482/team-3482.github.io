@@ -72,7 +72,7 @@ CSS STRUCTURE:
   --dark-gray-color: #474341;
   --bs-light-rgb: rgba(255, 255, 255, 1);
   --light-color: #fff;
-  --primary-color: #ff9e0d;
+  --primary-color: #dd3125;
   --swiper-theme-color: #807E7C !important;
   --bs-primary-rgb: 255, 158, 13;
 }
@@ -86,9 +86,15 @@ CSS STRUCTURE:
   }
 }
 
+@font-face {
+  font-family: Absolute Zero;
+  src: url(media/Absolute\ Zero\ Italic.otf);
+}
+
 /* Fonts */
 :root {
   --body-font: "Open Sans", sans-serif;
+  --large-heading-font: "Absolute Zero", serif, Italic;
   --heading-font: "Oswald", serif;
 }
 
@@ -137,6 +143,7 @@ a.stretched-link {
 a:hover {
   text-decoration: none;
   color: var(--primary-color);
+  text-shadow: 0 0 50px var(--primary-color);
 }
 
 p.light {
@@ -245,11 +252,13 @@ strong {
 
 /* - Section Title
 --------------------------------------------------------------*/
-h1,
-h2,
-h3,
-h4,
-h5 {
+h1, h2 {
+  font-family: var(--large-heading-font);
+  font-weight: 500;
+  line-height: 1;
+}
+
+h3, h4, h5 {
   font-family: var(--heading-font);
   font-weight: 500;
   line-height: 1;
@@ -264,7 +273,7 @@ h5.light {
 }
 
 h1 {
-  font-size: 8em;
+  font-size: 5em;
 }
 
 h2 {
@@ -307,7 +316,7 @@ h3 {
   border-color: var(--dark-color);
   border-radius: 0px;
   box-shadow: none;
-
+  text-shadow: 0 0 50px var(--primary-color);
 }
 
 /* - Button Sizes
@@ -526,6 +535,7 @@ h3 {
   color: var(--light-color);
 }
 
+
 /* 3.2 Text Hover Effects
 ------------------------------------------------------------- */
 /* .text-hover ul li>a,
@@ -669,6 +679,7 @@ a.text-hover:focus:after{
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link:hover {
   color: var(--primary-color);
+  
 }
 
 .offcanvas a.nav-link {
@@ -679,6 +690,7 @@ a.text-hover:focus:after{
 .offcanvas a.nav-link:hover,
 .offcanvas a.nav-link:focus {
   color: var(--primary-color);
+  text-shadow: 0 0 50px var(--primary-color);
 }
 
 .navbar-toggler svg.navbar-icon {
@@ -687,40 +699,6 @@ a.text-hover:focus:after{
   fill: var(--light-color);
   outline: none;
 }
-
-/* dropdown style  */
-.dropdown-menu {
-  border-radius: 0rem;
-}
-
-.dropdown-item {
-  display: block;
-  width: 100%;
-  padding: 0.25rem 1rem;
-  clear: both;
-  font-weight: 400;
-  color: #212529;
-  font-family: var(--heading-font);
-  text-align: inherit;
-  text-decoration: none;
-  white-space: nowrap;
-  background-color: transparent;
-  border: 0;
-}
-
-.dropdown-toggle::after {
-  border-top: 0em solid;
-  border-right: 0em solid transparent;
-  border-left: 0em solid transparent;
-}
-
-.dropdown-item.active,
-.dropdown-item:active {
-  color: #1e2125;
-  text-decoration: none;
-  background-color: #e9ecef;
-}
-
 
 /* - Offcanvas
 ------------------------------------------------------------- */
@@ -744,6 +722,41 @@ a.text-hover:focus:after{
   align-items: unset !important;
   padding-left: 20px;
 }
+
+.social-media {
+  justify-content:center;
+  text-align:center;
+  padding-top: 15px;
+}
+
+.social-media a {  
+  margin: 18px;
+  font-size: 1.5rem;
+}
+
+.social-media a i{
+	cursor: pointer;
+  position: absolute;
+}
+
+.social-media  a:hover {
+	color: var(--primary-color);
+	text-shadow: 0 0 50px var(--primary-color);
+}
+
+.footer-socials {
+  color:black;
+  left: 10px;
+}
+
+.navbar-socials {
+  color: white; 
+}
+
+.center {
+  text-align: center;    
+}
+
 
 @media (max-width: 999px) {
 
@@ -772,21 +785,16 @@ a.text-hover:focus:after{
 /* 4.2 Intro
 ------------------------------------------------------------- */
 #intro .banner-content {
-  top: 30%;
-  left: 30%;
+  top: 35%; /* change this to move the "we are arrowbotics" text up or down to not block the image */
+  left: 15%;
   z-index: 3;
   width: 70%;
+  text-align: center;
 }
 
 @media (max-width: 1399px) {
   #intro .banner-content {
     left: 10%;
-  }
-}
-
-@media (max-width: 999px) {
-  #intro .banner-content h1 {
-    font-size: 5.8em;
   }
 }
 
@@ -797,13 +805,7 @@ a.text-hover:focus:after{
     object-fit: cover;
   }
 
-  #intro .banner-content {
-    top: 20%;
-  }
 
-  #intro .banner-content h1 {
-    font-size: 3em;
-  }
 }
 
 /* 4.3 About
@@ -823,6 +825,7 @@ button.filter-button.active {
 .projects-isotope button:hover,
 .projects-isotope button:focus {
   color: var(--primary-color);
+  text-shadow: 0 0 50px var(--primary-color);
 }
 
 #projects .projects-content img {
@@ -860,6 +863,10 @@ button.filter-button.active {
 ------------------------------------------------------------- */
 .team-member ul.social-links {
   top: 0;
+}
+
+.social-links {
+  color: #fff;
 }
 
 .team-member ul li {
@@ -932,6 +939,7 @@ button.filter-button.active {
 
 .counter-number h4:hover {
   color: var(--primary-color);
+  text-shadow: 0 0 50px var(--primary-color);
 }
 
 /* 4.10 Latest Blog

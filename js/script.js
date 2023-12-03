@@ -2,18 +2,6 @@
 
     "use strict";
 
-      // background color when scroll 
-
-  var initScrollNav = function() {
-    var scroll = $(window).scrollTop();
-
-    if (scroll >= 200) {
-      $('.navbar').addClass("bg-black");
-    }else{
-      $('.navbar').removeClass("bg-black");
-    }
-  }
-
   $(window).scroll(function() {    
     initScrollNav();
   }); 
