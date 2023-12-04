@@ -180,7 +180,7 @@ strong {
 /* 2.2 Background Color
 /*----------------------------------------------*/
 .bg-gray-200 {
-  background-color: var(--gray-color-200);
+  background-color: var(--gray-color-300);
 }
 
 .bg-light {
