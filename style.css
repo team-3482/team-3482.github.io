@@ -180,7 +180,7 @@ strong {
 /* 2.2 Background Color
 /*----------------------------------------------*/
 .bg-gray-200 {
-  background-color: var(--gray-color-200);
+  background-color: var(--gray-color-300);
 }
 
 .bg-light {
@@ -864,7 +864,7 @@ button.filter-button.active {
 }
 
 #sponsors .brand-item:hover {
-  background-color: #000;
+  box-shadow: 0 0 30px black;
 }
 
 /* 4.7 Our Team
