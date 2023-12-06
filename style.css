@@ -273,7 +273,7 @@ h5.light {
 }
 
 h1 {
-  font-size: 5em;
+  font-size: 5.5em;
 }
 
 h2 {
@@ -785,8 +785,8 @@ a.text-hover:focus:after{
 /* 4.2 Intro
 ------------------------------------------------------------- */
 #home .banner-content {
-  top: 35%; /* change this to move the "we are arrowbotics" text up or down to not block the image */
-  left: 15%;
+  top: 33%; /* change this to move the "we are arrowbotics" text up or down to not block the image */
+  left: 16.5%;
   z-index: 3;
   width: 70%;
   text-align: center;
