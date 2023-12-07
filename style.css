@@ -737,6 +737,7 @@ a.text-hover:focus:after{
 .social-media a i{
 	cursor: pointer;
   position: absolute;
+  color:white;
 }
 
 .social-media  a:hover {
@@ -745,9 +746,15 @@ a.text-hover:focus:after{
 }
 
 .footer-socials {
-  color:black;
+  color:white;
   left: 10px;
 }
+
+footer, .footer-bottom{
+  background-color: black;
+  color: white;
+}
+
 
 .navbar-socials {
   color: white; 
@@ -790,6 +797,15 @@ a.text-hover:focus:after{
   z-index: 3;
   width: 70%;
   text-align: center;
+}
+
+.banner-content-seperate {
+  top: 55%; /* change this to move the "Robots" or "Sponsors" text up or down to not block the image */
+  left: 16.5%;
+  z-index: 3;
+  width: 70%;
+  text-align: center;
+  text-shadow: 0 0 50px black;
 }
 
 @media (max-width: 1399px) {
