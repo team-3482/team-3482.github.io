@@ -800,13 +800,23 @@ footer, .footer-bottom{
 }
 
 .banner-content-seperate {
-  top: 55%; /* change this to move the "Robots" or "Sponsors" text up or down to not block the image */
+  top: 55%; /* change this to move the "Robots" text up or down to not block the image */
   left: 16.5%;
   z-index: 3;
   width: 70%;
   text-align: center;
   text-shadow: 0 0 50px black;
 }
+
+.banner-content-other {
+  top: 55%; /* change this to move the "Sponsors" text up or down to not block the image */
+  left: 20%;
+  z-index: 3;
+  width: 70%;
+  text-align: center;
+  text-shadow: 0 0 50px black;
+}
+
 
 @media (max-width: 1399px) {
   #home .banner-content {
@@ -821,6 +831,13 @@ footer, .footer-bottom{
     object-fit: cover;
   }
 
+ .center {
+  display: block;
+  height: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
 }
 
