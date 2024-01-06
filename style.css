@@ -877,8 +877,9 @@ button.filter-button.active {
   margin-right: auto;
   margin-bottom: 4em;
   background-color: black;
-  border: 2px, var(--primary-color) 2px;
-  color: white;  
+  border: 2px solid var(--primary-color);
+  color: white; 
+  border-radius: 10px;
 }
 
 
