@@ -1002,7 +1002,7 @@ button.filter-button.active {
 #media .image {
   display: flex;
   justify-content: center;
-  padding: 25px 0;
+  padding: 10px 0;
   transition: 0.9s ease-in-out;
 }
 
