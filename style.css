@@ -791,7 +791,7 @@ footer, .footer-bottom{
 
 /* 4.2 Intro
 ------------------------------------------------------------- */
-#home .banner-content {
+#home .banner-content-main {
   top: 33%; /* change this to move the "we are arrowbotics" text up or down to not block the image */
   left: 16.5%;
   z-index: 3;
@@ -799,7 +799,7 @@ footer, .footer-bottom{
   text-align: center;
 }
 
-.banner-content-seperate {
+.banner-content-robots {
   top: 55%; /* change this to move the "Robots" text up or down to not block the image */
   left: 16.5%;
   z-index: 3;
@@ -808,7 +808,7 @@ footer, .footer-bottom{
   text-shadow: 0 0 50px black;
 }
 
-.banner-content-other {
+.banner-content-sponsor {
   top: 55%; /* change this to move the "Sponsors" text up or down to not block the image */
   left: 20%;
   z-index: 3;
@@ -817,6 +817,14 @@ footer, .footer-bottom{
   text-shadow: 0 0 50px black;
 }
 
+.banner-content-media {
+  top: 55%; /* change this to move the "Media" text up or down to not block the image */
+  left: 20%;
+  z-index: 3;
+  width: 70%;
+  text-align: center;
+  text-shadow: 0 0 50px black;
+}
 
 @media (max-width: 1399px) {
   #home .banner-content {
