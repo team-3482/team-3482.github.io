@@ -277,7 +277,7 @@ h1 {
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 3em;
   font-weight: 400;
   letter-spacing: 0.32em;
   padding-left: 63px;
@@ -791,7 +791,7 @@ footer, .footer-bottom{
 
 /* 4.2 Intro
 ------------------------------------------------------------- */
-#home .banner-content {
+#home .banner-content-main {
   top: 33%; /* change this to move the "we are arrowbotics" text up or down to not block the image */
   left: 16.5%;
   z-index: 3;
@@ -799,9 +799,27 @@ footer, .footer-bottom{
   text-align: center;
 }
 
-.banner-content-seperate {
-  top: 55%; /* change this to move the "Robots" or "Sponsors" text up or down to not block the image */
+.banner-content-robots {
+  top: 55%; /* change this to move the "Robots" text up or down to not block the image */
   left: 16.5%;
+  z-index: 3;
+  width: 70%;
+  text-align: center;
+  text-shadow: 0 0 50px black;
+}
+
+.banner-content-sponsor {
+  top: 55%; /* change this to move the "Sponsors" text up or down to not block the image */
+  left: 20%;
+  z-index: 3;
+  width: 70%;
+  text-align: center;
+  text-shadow: 0 0 50px black;
+}
+
+.banner-content-media {
+  top: 55%; /* change this to move the "Media" text up or down to not block the image */
+  left: 20%;
   z-index: 3;
   width: 70%;
   text-align: center;
@@ -821,6 +839,13 @@ footer, .footer-bottom{
     object-fit: cover;
   }
 
+ .center {
+  display: block;
+  height: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
 
 }
 
@@ -971,4 +996,19 @@ button.filter-button.active {
     color: var(--accent-color);
     transition: all 0.5s ease-in;
   }
-  
+ 
+/* Media things
+ ------------------------------------*/
+#media .image {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+  transition: 0.9s ease-in-out;
+}
+
+#media .banner-title {
+  font-size: 3em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding-left: 0px;
+}
