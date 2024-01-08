@@ -1002,6 +1002,13 @@ button.filter-button.active {
 #media .image {
   display: flex;
   justify-content: center;
-  padding: 50px 0;
+  padding: 25px 0;
   transition: 0.9s ease-in-out;
+}
+
+#media .banner-title {
+  font-size: 3em;
+  font-weight: 400;
+  letter-spacing: 1px;
+  padding-left: 0px;
 }
