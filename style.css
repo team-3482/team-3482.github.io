@@ -273,7 +273,7 @@ h5.light {
 }
 
 h1 {
-  font-size: clamp(1rem, -0.875rem + 8.333vw, 5.5rem);
+  font-size: clamp(2.5rem, -0.875rem + 8.333vw, 5.5rem);
 }
 
 h2 {
