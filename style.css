@@ -62,7 +62,7 @@ CSS STRUCTURE:
 --------------------------------------------------------------*/
 :root {
   --accent-color: #333;
-  --black-color: #000;
+  --black-color: #00060F;
   --dark-color: #111;
   --gray-color-100: #F9F7F5;
   --gray-color-200: #EFEFEF;
@@ -70,10 +70,10 @@ CSS STRUCTURE:
   --gray-color-400: #C0C0C0;
   --gray-color-500: #adb5bd;
   --dark-gray-color: #474341;
-  --bs-light-rgb: rgba(255, 255, 255, 1);
-  --light-color: #fff;
-  --primary-color: #dd3125;
-  --swiper-theme-color: #807E7C !important;
+  --bs-light-rgb: rgba(255, 255, 252, 1);
+  --light-color: #FFFFFC;
+  --primary-color: #FF3535;
+  --swiper-theme-color: #808386 !important;
   --bs-primary-rgb: 255, 158, 13;
 }
 
@@ -273,7 +273,7 @@ h5.light {
 }
 
 h1 {
-  font-size: 5.5em;
+  font-size: clamp(2rem, -0.875rem + 8.333vw, 5.5rem);
 }
 
 h2 {
