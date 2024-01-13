@@ -34,21 +34,20 @@ async function getImages({owner, repo, path, ref, branchName}) {
   try {
     
     const dirContentsMetadata = await octokit.repos.getContents(dirContentsConfig);
-  if (Array.isArray(dirContentsMetadata.data)) {
-    for (let contents of dirContentsMetadata.data) {
-      console.log(contents.name)
-    }
+    if (Array.isArray(dirContentsMetadata.data)) {
+      for (let contents of dirContentsMetadata.data) {
+        console.log(contents.name)
+      }
 
-    // for await (const {data} of iterator) {
-    //   imageList = [...imageList, ...data.map(fileData => fileData.filename)];
-    // }
-  } 
-  //   catch (error) {
-  //   if (error.response) {
-  //     console.error(`Error! Status: ${error.response.status}. Message: ${error.response.data.message}`)
-  //   }
-  //   console.error(error)
-  // }
+    for await (const {data} of iterator) {
+      imageList = [...imageList, ...data.map(fileData => fileData.filename)];
+    }
+  }catch (error) {
+    if (error.response) {
+      console.error(`Error! Status: ${error.response.status}. Message: ${error.response.data.message}`)
+    }
+    console.error(error)
+  }
 
   return imageList;
 }
@@ -74,14 +73,14 @@ async function placeImage({owner, repo, path, ref, branchName}) {
 
     return comment.html_url;
   } catch (error) {
-    if (error.response) {
-      console.error(`Error! Status: ${error.response.status}. Message: ${error.response.data.message}`)
-    }
+    // if (error.response) {
+    //   console.error(`Error! Status: ${error.response.status}. Message: ${error.response.data.message}`)
+    // }
     console.error(error)
   }
 }
 
-await commentIfDataFilesChanged({owner: "github", repo: "docs", pullNumber: 191});
+await placeImage({owner: "team-3482", repo: "team-3482.github.io", path: "/team-3482.github.io/CCC 2023/", });
 
 
 
