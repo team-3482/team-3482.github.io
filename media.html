@@ -110,30 +110,62 @@
             <div id = "image-container"></div>
             
             <script>
-              import {Octokit} from "octokit"
+              <!-- <!-- import {Octokit} from "octokit" --> -->
+              <!-- <!----> -->
+              <!-- <!-- const octokit = new Octokit({  --> -->
+              <!-- <!--   // auth: 'YOUR-TOKEN', --> -->
+              <!-- <!-- }); --> -->
+              <!--  -->
+              <!-- let image = { -->
+              <!--   owner: "team-3482", -->
+              <!--   repo: "team-3482.github.io", -->
+              <!--   path: "team-3482.github.io/CCC 2023/", -->
+              <!--   ref: "media", -->
+              <!--   branch: "media" -->
+              <!-- } -->
+              <!--  -->
+              
+           <!--    const images = await fetch.repos.getContents(image); -->
+           <!--    console.log(images) -->
+           <!--    const container = document.getElementById('image-container'); -->
+           <!--  -->
+           <!--    for (let i = 0; i < images.length; i++) { -->
+           <!--        const img = document.createElement('img'); -->
+           <!--      img.src = images[i]; -->
+           <!--      container.appendChild(img); -->
 
-              const octokit = new Octokit({ 
-                // auth: 'YOUR-TOKEN',
-              });
-              
-              let images = {
-                owner: "team-3482",
-                repo: "team-3482.github.io",
-                path: "team-3482.github.io/CCC 2023/",
-                ref: "media",
-                branch: "media"
-              }
-              
-              
-              const images = await octokit.repos.getContents(images);
-              console.log(images)
-              const container = document.getElementById('image-container');
-           
-              for (let i = 0; i < images.length; i++) {
-                  const img = document.createElement('img');
-                img.src = images[i];
-                container.appendChild(img);
+                const repoOwner = 'team-3482';
+                const repoName = 'team-3482.github.io';
+                const folderPath = 'team-3482.github.io/CCC 2023 ';
+                const branchName = 'media';
+
+                // Fetch images from GitHub repository
+                async function fetchImages() {
+                   // const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${folderPath}?ref=${branchName}`;
+                      const apiUrl = 'https://api.github.com/repos/team-3482/team-3482.github.io/contents/CCC 2023 ?ref=media'
+                    try {
+                        const response = await fetch(apiUrl);
+                        const data = await response.json();
+
+                        data.forEach(file => {
+                            if (file.type === 'file') {
+                                const imageUrl = file.download_url;
+
+                                // Create an image element and append to the container
+                                const imgElement = document.createElement('img');
+                                imgElement.src = imageUrl;
+                                document.getElementById('imageContainer').appendChild(imgElement);
+                            }
+                        });
+                    } catch (error) {
+                        console.error('Error fetching images:', error);
+                    }
+                }
+
+                // Call the fetchImages function
+                fetchImages();
             </script>
+
 
             <div class="col-lg-3">
               <div class="image">
