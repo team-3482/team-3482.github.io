@@ -1001,8 +1001,10 @@ button.filter-button.active {
  ------------------------------------*/
 #media .image {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
-  padding: 10px 0;
+  /* padding: 10px 0; */
+  gap: 10px;
   transition: 0.9s ease-in-out;
 }
 

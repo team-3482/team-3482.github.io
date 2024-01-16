@@ -110,37 +110,13 @@
 
             
             <script>
-              <!-- <!-- import {Octokit} from "octokit" --> -->
-              <!-- <!----> -->
-              <!-- <!-- const octokit = new Octokit({  --> -->
-              <!-- <!--   // auth: 'YOUR-TOKEN', --> -->
-              <!-- <!-- }); --> -->
-              <!--  -->
-              <!-- let image = { -->
-              <!--   owner: "team-3482", -->
-              <!--   repo: "team-3482.github.io", -->
-              <!--   path: "team-3482.github.io/CCC 2023/", -->
-              <!--   ref: "media", -->
-              <!--   branch: "media" -->
-              <!-- } -->
-              <!--  -->
-              
-           <!--    const images = await fetch.repos.getContents(image); -->
-           <!--    console.log(images) -->
-           <!--    const container = document.getElementById('image-container'); -->
-           <!--  -->
-           <!--    for (let i = 0; i < images.length; i++) { -->
-           <!--        const img = document.createElement('img'); -->
-           <!--      img.src = images[i]; -->
-           <!--      container.appendChild(img); -->
-
                 const repoOwner = 'team-3482';
                 const repoName = 'team-3482.github.io';
-                const folderPath = 'CCC 2023 ';
+                <!-- const folderPath = 'CCC 2023 '; -->
                 const branchName = 'media';
 
                 // Fetch images from GitHub repository
-                async function fetchImages() {
+                async function fetchImages(folderPath, divName) {
                       const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${folderPath}?ref=${branchName}`;
                       //const apiUrl = 'https://api.github.com/repos/team-3482/team-3482.github.io/contents/CCC 2023 ?ref=media'
                     try {
@@ -154,7 +130,7 @@
                                 // Create an image element and append to the container
                                 const imgElement = document.createElement('img');
                                 imgElement.src = imageUrl;
-                                document.getElementById('image-container').appendChild(imgElement);
+                              document.getElementById(divName).appendChild(imgElement);
                             }
                         });
                     } catch (error) {
@@ -163,21 +139,21 @@
                 }
 
                 // Call the fetchImages function
-                fetchImages();
+                fetchImages('CCC 2023 ', 'image-container');
             </script>           
             <div class="col-lg-3">
               <div class="image">
                 <img src="https://cdn.githubraw.com/team-3482/team-3482.github.io/media/SVR%202023/IMG_1161.jpg" height="300px">
               </div>
             </div>
-            <div id = "image-container" height = "300px"></div>
+            <div id = "image-container" height = "300px" class = "image"></div>
             <div class="col-lg-3">
               <div class="image">
                 <img src="https://cdn.githubraw.com/team-3482/team-3482.github.io/media/SVR%202023/IMG_2514.jpg" height="300px">
               </div>
             </div>
           </div>
-            <h1 class = "banner-title" style = "color:Chocolate;">Bronze tier</h1>
+            <h1 class = "banner-title">2023 SVR</h1>
             <div class = "row justify-content-between">
             <div class="col-lg-3 pb-3">
               <div class="image bg-gray-200">
