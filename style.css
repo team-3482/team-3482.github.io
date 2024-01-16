@@ -1018,4 +1018,5 @@ button.filter-button.active {
 #media img{
   object-fit: cover;
   height: 300px;
+  width: 400px;
 }
