@@ -104,45 +104,19 @@
             <h3 class="text-uppercase">Pictures and videos</h3>
           </div><br><br><br>
 
-          <h2 class="banner-title" style = "color:Black;">2023 Images & Videos<h1>
+          <h2 class="banner-title" style = "color:Black;">2023 Images & Videos</h2>
           <div class="row justify-content-between">
-            
-            <div id = "image-container"></div>
-            
+         
             <script>
-              <!-- <!-- import {Octokit} from "octokit" --> -->
-              <!-- <!----> -->
-              <!-- <!-- const octokit = new Octokit({  --> -->
-              <!-- <!--   // auth: 'YOUR-TOKEN', --> -->
-              <!-- <!-- }); --> -->
-              <!--  -->
-              <!-- let image = { -->
-              <!--   owner: "team-3482", -->
-              <!--   repo: "team-3482.github.io", -->
-              <!--   path: "team-3482.github.io/CCC 2023/", -->
-              <!--   ref: "media", -->
-              <!--   branch: "media" -->
-              <!-- } -->
-              <!--  -->
-              
-           <!--    const images = await fetch.repos.getContents(image); -->
-           <!--    console.log(images) -->
-           <!--    const container = document.getElementById('image-container'); -->
-           <!--  -->
-           <!--    for (let i = 0; i < images.length; i++) { -->
-           <!--        const img = document.createElement('img'); -->
-           <!--      img.src = images[i]; -->
-           <!--      container.appendChild(img); -->
-
                 const repoOwner = 'team-3482';
                 const repoName = 'team-3482.github.io';
-                const folderPath = 'team-3482.github.io/CCC 2023 ';
+                <!-- const folderPath = 'CCC 2023 '; -->
                 const branchName = 'media';
 
                 // Fetch images from GitHub repository
-                async function fetchImages() {
-                   // const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${folderPath}?ref=${branchName}`;
-                      const apiUrl = 'https://api.github.com/repos/team-3482/team-3482.github.io/contents/CCC 2023 ?ref=media'
+                async function fetchImages(folderPath, divName) {
+                      const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${folderPath}?ref=${branchName}`;
+                      //const apiUrl = 'https://api.github.com/repos/team-3482/team-3482.github.io/contents/CCC 2023 ?ref=media'
                     try {
                         const response = await fetch(apiUrl);
                         const data = await response.json();
@@ -154,7 +128,7 @@
                                 // Create an image element and append to the container
                                 const imgElement = document.createElement('img');
                                 imgElement.src = imageUrl;
-                                document.getElementById('imageContainer').appendChild(imgElement);
+                              document.getElementById(divName).appendChild(imgElement);
                             }
                         });
                     } catch (error) {
@@ -163,29 +137,14 @@
                 }
 
                 // Call the fetchImages function
-                fetchImages();
-            </script>
-
-
-            <div class="col-lg-3">
-              <div class="image">
-                <img src="https://cdn.githubraw.com/team-3482/team-3482.github.io/media/SVR%202023/IMG_1161.jpg" height="300px">
-              </div>
-            </div>
-            <div class="col-lg-3">
-              <div class="image">
-                <img src="https://cdn.githubraw.com/team-3482/team-3482.github.io/media/SVR%202023/IMG_2514.jpg" height="300px">
-              </div>
-            </div>
-          </div>
-            <h1 class = "banner-title" style = "color:Chocolate;">Bronze tier</h1>
-            <div class = "row justify-content-between">
-            <div class="col-lg-3 pb-3">
-              <div class="image bg-gray-200">
-                 <img src="media/sponsors/dreammaker.png" alt="DREAMMAKERFUND">
-              </div>
-            </div>
-        </div>
+                fetchImages('CCC 2023 ', 'CCC-container');
+                fetchImages('SVR 2023', 'SVR-container');
+            </script>           
+           
+            <div id = "CCC-container" class = "image"></div>
+            <h2 class = "banner-title pb-3" style = "color:Black;">2023 SVR</h2>
+            <div id = "SVR-container" class = "image"></div>
+            
       </section>
       <footer id="footer" class="overflow-hidden padding-large">
         <div class="container">
