@@ -1020,3 +1020,10 @@ button.filter-button.active {
   height: 300px;
   width: 400px;
 }
+
+#media video{
+  object-fit: cover;
+  height: 300px;
+  width: 400px;
+}
+
