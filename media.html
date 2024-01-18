@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Arrowbotics Sponsors</title>
+    <title>Arrowbotics Media</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -123,13 +123,24 @@
 
                         data.forEach(file => {
                             if (file.type === 'file') {
-                                const imageUrl = file.download_url;
+                              const imageUrl = file.download_url;
+                              if(file.download_url.slice(-1) === 'V') {
+                                console.log('movie');
+                                const imgElement = document.createElement('video');
+                                Object.assign(imgElement,{
+                                  controls: 'true',
+                                });
 
-                                // Create an image element and append to the container
+                                imgElement.src = imageUrl;
+                                document.getElementById(divName).appendChild(imgElement);
+                              }
+                              else{
+                                console.log('image');
                                 const imgElement = document.createElement('img');
                                 imgElement.src = imageUrl;
-                              document.getElementById(divName).appendChild(imgElement);
-                            }
+                                document.getElementById(divName).appendChild(imgElement);
+                              }
+                          }
                         });
                     } catch (error) {
                         console.error('Error fetching images:', error);
@@ -140,7 +151,14 @@
                 fetchImages('CCC 2023 ', 'CCC-container');
                 fetchImages('SVR 2023', 'SVR-container');
             </script>           
-           
+            
+            <!-- <script> -->
+            <!--   async function fetchGoogleImages(id) { -->
+            <!--     const url = 'https://photos.google.com/u/0/share/AF1QipNZSt6P70SCd6hn17hGjOUoVnfeUsBrxJKl6Kd4cYDkjOqFeYNECDUMOwgiEPxelQ?key=aE1nUllkbC0tekpJWEt4MGlwWmJqQ2l4d0JSR1V3 -->
+            <!--     const url = 'https://photos.google.com/u/0/share/AF1QipNZSt6P70SCd6hn17hGjOUoVnfeUsBrxJKl6Kd4cYDkjOqFeYNECDUMOwgiEPxelQ?key=aE1nUllkbC0tekpJWEt4MGlwWmJqQ2l4d0JSR1V3'' -->
+            <!--   } -->
+            <!-- </script> -->
+
             <div id = "CCC-container" class = "image"></div>
             <h2 class = "banner-title pb-3" style = "color:Black;">2023 SVR</h2>
             <div id = "SVR-container" class = "image"></div>
