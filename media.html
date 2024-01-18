@@ -127,6 +127,10 @@
                               if(file.download_url.slice(-1) === 'V') {
                                 console.log('movie');
                                 const imgElement = document.createElement('video');
+                                Object.assign(imgElement,{
+                                  controls: 'true',
+                                });
+
                                 imgElement.src = imageUrl;
                                 document.getElementById(divName).appendChild(imgElement);
                               }
