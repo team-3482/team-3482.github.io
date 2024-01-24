@@ -909,7 +909,8 @@ button.filter-button.active {
 
 /* 4.6 Brand Collections
 ------------------------------------------------------------- */
-#sponsors .brand-item {
+#sponsors .brand-item 
+{
   display: flex;
   justify-content: center;
   padding: 50px 0;
