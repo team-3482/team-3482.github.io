@@ -277,7 +277,7 @@ h1 {
 }
 
 h2 {
-  font-size: 3em;
+  font-size: 1.4em;
   font-weight: 400;
   letter-spacing: 0.32em;
   padding-left: 63px;
@@ -793,9 +793,9 @@ footer, .footer-bottom{
 ------------------------------------------------------------- */
 #home .banner-content-main {
   top: 33%; /* change this to move the "we are arrowbotics" text up or down to not block the image */
-  left: 16.5%;
+  left: 0%;
   z-index: 3;
-  width: 70%;
+  width: 100%;
   text-align: center;
 }
 
