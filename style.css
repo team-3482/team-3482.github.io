@@ -252,13 +252,13 @@ strong {
 
 /* - Section Title
 --------------------------------------------------------------*/
-h1, h2 {
+h1, h2, h6 {
   font-family: var(--large-heading-font);
   font-weight: 500;
   line-height: 1;
 }
 
-h3, h4, h5 {
+h3, h4, h5, h7 {
   font-family: var(--heading-font);
   font-weight: 500;
   line-height: 1;
@@ -268,7 +268,9 @@ h1.light,
 h2.light,
 h3.light,
 h4.light,
-h5.light {
+h5.light,
+h6.light,
+h7.light {
   color: var(--light-color);
 }
 
@@ -277,13 +279,27 @@ h1 {
 }
 
 h2 {
-  font-size: 1.4em;
+  font-size: 1.8em;
   font-weight: 400;
   letter-spacing: 0.32em;
-  padding-left: 63px;
+  padding-left: 41px;
+  text-align: center;
+}
+
+h6 {
+  font-size: 1.8em;
+  font-weight: 400;
+  letter-spacing: 0.32em;
+  padding-left: 41px;
 }
 
 h3 {
+  font-size: 3.9em;
+  font-weight: 900;
+  text-align: center;
+}
+
+h7 {
   font-size: 3.9em;
   font-weight: 900;
 }
@@ -621,14 +637,15 @@ a.text-hover:focus:after{
 ------------------------------------------*/
 .left-pattern {
   position: relative;
+  margin: right;
 }
 
 .left-pattern::before {
   content: "";
   position: absolute;
-  width: 52px;
+  width: 30px;
   height: 2px;
-  top: 46%;
+  top: 40%;
   left: 0;
   background-color: var(--primary-color);
 }
@@ -639,7 +656,7 @@ a.text-hover:focus:after{
 .jarallax {
   position: relative;
   z-index: 0;
-  min-height: 350px;
+  min-height: 600px;
 }
 
 .jarallax>.jarallax-img {
@@ -793,33 +810,33 @@ footer, .footer-bottom{
 ------------------------------------------------------------- */
 #home .banner-content-main {
   top: 33%; /* change this to move the "we are arrowbotics" text up or down to not block the image */
-  left: 0%;
+  left: -1%;
   z-index: 3;
   width: 100%;
   text-align: center;
 }
 
 .banner-content-robots {
-  top: 55%; /* change this to move the "Robots" text up or down to not block the image */
-  left: 16.5%;
+  top: 33%; /* change this to move the "Robots" text up or down to not block the image */
+  left: -1%;
   z-index: 3;
-  width: 70%;
+  width: 100%;
   text-align: center;
   text-shadow: 0 0 50px black;
 }
 
 .banner-content-sponsor {
-  top: 55%; /* change this to move the "Sponsors" text up or down to not block the image */
-  left: 20%;
+  top: 33%; /* change this to move the "Sponsors" text up or down to not block the image */
+  left: -1%;
   z-index: 3;
-  width: 70%;
+  width: 100%;
   text-align: center;
   text-shadow: 0 0 50px black;
 }
 
 .banner-content-media {
-  top: 55%; /* change this to move the "Media" text up or down to not block the image */
-  left: 20%;
+  top: 42%; /* change this to move the "Media" text up or down to not block the image */
+  left: 25%;
   z-index: 3;
   width: 70%;
   text-align: center;
@@ -841,7 +858,6 @@ footer, .footer-bottom{
 
  .center {
   display: block;
-  height: 650px;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
