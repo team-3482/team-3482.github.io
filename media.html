@@ -127,18 +127,28 @@
                               if(file.download_url.slice(-1) === 'V') {
                                 console.log('movie');
                                 const imgElement = document.createElement('video');
-                                Object.assign(imgElement,{
-                                  controls: 'true',
-                                });
-
                                 imgElement.src = imageUrl;
+                                imgElement.controls = true;
                                 document.getElementById(divName).appendChild(imgElement);
                               }
                               else{
                                 console.log('image');
-                                const imgElement = document.createElement('img');
-                                imgElement.src = imageUrl;
-                                document.getElementById(divName).appendChild(imgElement);
+                                const img = new Image();
+                                img.src = imageUrl;
+                                document.getElementById(divName).appendChild(canvas);
+                                
+                                
+                                <!-- img.onload = function () { -->
+                                <!--   const [newWidth, newHeight] = calculateSize(img, 400, 300); -->
+                                <!--   const canvas = document.createElement("canvas"); -->
+                                <!--   canvas.width = newWidth; -->
+                                <!--   canvas.height = newHeight; -->
+                                <!--   const ctx = canvas.getContext("2d"); -->
+                                <!---->
+                                <!--   ctx.drawImage(img, 0, 0, newWidth, newHeight); -->
+                                <!---->
+                                <!--   document.getElementById(divName).appendChild(canvas); -->
+                                <!-- };                                -->
                               }
                           }
                         });
@@ -147,11 +157,35 @@
                     }
                 }
 
-                // Call the fetchImages function
+                function calculateSize(img, maxWidth, maxHeight) {
+                let width = img.width / 8;
+                console.log(width);
+                let height = img.height / 8;
+                console.log(height);
+                console.log(width / height);
+
+                // calculate the width and height, constraining the proportions
+                if (width > height) {
+                  if (width > maxWidth) {
+                    height = Math.round((height * maxWidth) / width);
+                    width = maxWidth;
+                  }
+                } else {
+                  if (height > maxHeight) {
+                    width = Math.round((width * maxHeight) / height);
+                    height = maxHeight;
+                  }
+                }
+                console.log(height);
+                console.log(width);
+                return [width, height];
+              }
+
+
+                //Call the fetchImages function
                 fetchImages('CCC 2023 ', 'CCC-container');
                 fetchImages('SVR 2023', 'SVR-container');
-            </script>           
-            
+            </script>            
             <!-- <script> -->
             <!--   async function fetchGoogleImages(id) { -->
             <!--     const url = 'https://photos.google.com/u/0/share/AF1QipNZSt6P70SCd6hn17hGjOUoVnfeUsBrxJKl6Kd4cYDkjOqFeYNECDUMOwgiEPxelQ?key=aE1nUllkbC0tekpJWEt4MGlwWmJqQ2l4d0JSR1V3 -->
