@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Arrowbotics Sponsors</title>
+    <title>Arrowbotics Media</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,9 +65,9 @@
                     <a class="nav-link light text-uppercase p-0" href="sponsors.html">Sponsors</a>
                   </li>
                   <li class="nav-item me-5">
-                    <a class="nav-link light text-uppercase p-0" href="#divisions">Divisions</a>
+                    <a class="nav-link light text-uppercase p-0" href="divisions">Divisions</a>
                   </li>
-                  <li class="nav-item me-5">
+                  <li class="nav-item me-5">  
                     <a class="nav-link light text-uppercase p-0" href="robots.html">Robots</a>
                   </li>
                   <li class="nav-item me-5">
@@ -107,61 +107,65 @@
             <h3 class="text-uppercase">Pictures and videos</h3>
           </div><br><br><br>
 
-          <h2 class="banner-title" style = "color:Black;">2023 Images & Videos<h1>
+          <h2 class="banner-title" style = "color:Black;">CCC 2023</h2>
           <div class="row justify-content-between">
-            <div class="col-lg-3">
-              <div class="image">
-                <img src="https://cdn.githubraw.com/team-3482/team-3482.github.io/media/SVR%202023/IMG_1159.jpg" class="img-fluid">
-              </div>
-            </div>
-            <div class="col-lg-3">
-              <div class="image">
-                <img src="https://cdn.githubraw.com/team-3482/team-3482.github.io/media/SVR%202023/IMG_1159.jpg" class ="img-fluid" alt="Apple">
-              </div>
-            </div>
-            <div class="col-lg-3 pb-3">
-              <div class="image bg-gray-200">
-                <img src="media/sponsors/qualcomm.png" alt="Qualcomm">
-              </div>
-            </div>
-            <div class="col-lg-3 pb-1">
-              <div class="image bg-gray-200">
-                <img src="media/sponsors/first.png" alt="First">
-              </div>
-            </div>
-            <div class="col-lg-3 pb-3">
-              <div class="image bg-gray-200">
-                <img src="media/sponsors/norc.png" alt="NORC">
-              </div>
-            </div>
-            <div class="col-lg-3 pb-3">
-              <div class="image bg-gray-200">
-                <img src="media/sponsors/pge.png" alt="PG&E">
-              </div>
-            </div>
-            <div class="col-lg-3 pb-3">
-              <div class="image bg-gray-200">
-                <a href = "https://westmontptsa.org/">
-                  <img src="media/sponsors/wptsa.png" alt="WPTSA">
-                </a>
-              </div>
-            </div>
-            <div class="col-lg-3 pb-3">
-              <div class="image bg-gray-200">
-                <a href = "https://www.intuitive.com/en-us">
-                  <img src="media/sponsors/intuitive.png" alt="First">
-                </a>
-              </div>
-            </div>
-          </div>
-            <h1 class = "banner-title" style = "color:Chocolate;">Bronze tier</h1>
-            <div class = "row justify-content-between">
-            <div class="col-lg-3 pb-3">
-              <div class="image bg-gray-200">
-                 <img src="media/sponsors/dreammaker.png" alt="DREAMMAKERFUND">
-              </div>
-            </div>
-        </div>
+         
+            <script>
+                const repoOwner = 'team-3482';
+                const repoName = 'team-3482.github.io';
+                <!-- const folderPath = 'CCC 2023 '; -->
+                const branchName = 'media';
+
+                // Fetch images from GitHub repository
+                async function fetchImages(folderPath, divName) {
+                      const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${folderPath}?ref=${branchName}`;
+                      //const apiUrl = 'https://api.github.com/repos/team-3482/team-3482.github.io/contents/CCC 2023 ?ref=media'
+                    try {
+                        const response = await fetch(apiUrl);
+                        const data = await response.json();
+
+                        data.forEach(file => {
+                            if (file.type === 'file') {
+                              const imageUrl = file.download_url;
+                              if(file.download_url.slice(-1) === 'V') {
+                                console.log('movie');
+                                const imgElement = document.createElement('video');
+                                Object.assign(imgElement,{
+                                  controls: 'true',
+                                });
+
+                                imgElement.src = imageUrl;
+                                document.getElementById(divName).appendChild(imgElement);
+                              }
+                              else{
+                                console.log('image');
+                                const imgElement = document.createElement('img');
+                                imgElement.src = imageUrl;
+                                document.getElementById(divName).appendChild(imgElement);
+                              }
+                          }
+                        });
+                    } catch (error) {
+                        console.error('Error fetching images:', error);
+                    }
+                }
+
+                // Call the fetchImages function
+                fetchImages('CCC 2023 ', 'CCC-container');
+                fetchImages('SVR 2023', 'SVR-container');
+            </script>           
+            
+            <!-- <script> -->
+            <!--   async function fetchGoogleImages(id) { -->
+            <!--     const url = 'https://photos.google.com/u/0/share/AF1QipNZSt6P70SCd6hn17hGjOUoVnfeUsBrxJKl6Kd4cYDkjOqFeYNECDUMOwgiEPxelQ?key=aE1nUllkbC0tekpJWEt4MGlwWmJqQ2l4d0JSR1V3 -->
+            <!--     const url = 'https://photos.google.com/u/0/share/AF1QipNZSt6P70SCd6hn17hGjOUoVnfeUsBrxJKl6Kd4cYDkjOqFeYNECDUMOwgiEPxelQ?key=aE1nUllkbC0tekpJWEt4MGlwWmJqQ2l4d0JSR1V3'' -->
+            <!--   } -->
+            <!-- </script> -->
+
+            <div id = "CCC-container" class = "image"></div>
+            <h2 class = "banner-title pb-3" style = "color:Black;">2023 SVR</h2>
+            <div id = "SVR-container" class = "image"></div>
+            
       </section>
       <footer id="footer" class="overflow-hidden padding-large">
         <div class="container">
@@ -199,10 +203,7 @@
         <div class="row">
           <div class="col-lg-6">
             <p>
-              ©<span id="copyright"> year </span> Arrowbotics | 
-              <strong>
-                <a href="https://templatesjungle.com/downloads/boldiz-contractor-building-bootstrap-website-template/">HTML Template</a>
-              </strong>
+              ©<span id="copyright"> year </span> Arrowbotics  
             </p>
           </div>
         </div>
@@ -219,6 +220,8 @@
     <script>
       document.getElementById("copyright").innerHTML = new Date().getFullYear();
     </script>
-
+    <script src = "script.js">
+      
+    </script>
   </body>
 </html>
