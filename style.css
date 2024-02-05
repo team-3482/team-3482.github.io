@@ -279,7 +279,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.8em;
+  font-size: clamp(1.8rem, -0.875rem + 8.333vw, 3.7rem);
   font-weight: 400;
   letter-spacing: 0.32em;
   padding-left: 41px;
@@ -287,7 +287,7 @@ h2 {
 }
 
 h6 {
-  font-size: 1.8em;
+  font-size: clamp(1.8rem, -0.875rem + 8.333vw, 3.7rem);
   font-weight: 400;
   letter-spacing: 0.32em;
   padding-left: 41px;
@@ -656,7 +656,7 @@ a.text-hover:focus:after{
 .jarallax {
   position: relative;
   z-index: 0;
-  min-height: 600px;
+  min-height: 550px;
 }
 
 .jarallax>.jarallax-img {
