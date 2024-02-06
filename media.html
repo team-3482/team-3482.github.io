@@ -113,13 +113,11 @@
             <script>
                 const repoOwner = 'team-3482';
                 const repoName = 'team-3482.github.io';
-                <!-- const folderPath = 'CCC 2023 '; -->
                 const branchName = 'media';
 
                 // Fetch images from GitHub repository
                 async function fetchImages(folderPath, divName) {
                       const apiUrl = `https://api.github.com/repos/${repoOwner}/${repoName}/contents/${folderPath}?ref=${branchName}`;
-                      //const apiUrl = 'https://api.github.com/repos/team-3482/team-3482.github.io/contents/CCC 2023 ?ref=media'
                     try {
                         const response = await fetch(apiUrl);
                         const data = await response.json();
@@ -130,18 +128,15 @@
                               if(file.download_url.slice(-1) === 'V') {
                                 console.log('movie');
                                 const imgElement = document.createElement('video');
-                                Object.assign(imgElement,{
-                                  controls: 'true',
-                                });
-
                                 imgElement.src = imageUrl;
+                                imgElement.controls = true;
                                 document.getElementById(divName).appendChild(imgElement);
                               }
                               else{
                                 console.log('image');
-                                const imgElement = document.createElement('img');
-                                imgElement.src = imageUrl;
-                                document.getElementById(divName).appendChild(imgElement);
+                                const img = new Image();
+                                img.src = imageUrl;
+                                  document.getElementById(divName).appendChild(img);
                               }
                           }
                         });
@@ -149,19 +144,10 @@
                         console.error('Error fetching images:', error);
                     }
                 }
-
-                // Call the fetchImages function
+                //Call the fetchImages function
                 fetchImages('CCC 2023 ', 'CCC-container');
                 fetchImages('SVR 2023', 'SVR-container');
-            </script>           
-            
-            <!-- <script> -->
-            <!--   async function fetchGoogleImages(id) { -->
-            <!--     const url = 'https://photos.google.com/u/0/share/AF1QipNZSt6P70SCd6hn17hGjOUoVnfeUsBrxJKl6Kd4cYDkjOqFeYNECDUMOwgiEPxelQ?key=aE1nUllkbC0tekpJWEt4MGlwWmJqQ2l4d0JSR1V3 -->
-            <!--     const url = 'https://photos.google.com/u/0/share/AF1QipNZSt6P70SCd6hn17hGjOUoVnfeUsBrxJKl6Kd4cYDkjOqFeYNECDUMOwgiEPxelQ?key=aE1nUllkbC0tekpJWEt4MGlwWmJqQ2l4d0JSR1V3'' -->
-            <!--   } -->
-            <!-- </script> -->
-
+            </script>            
             <div id = "CCC-container" class = "image"></div>
             <h2 class = "banner-title pb-3" style = "color:Black;">2023 SVR</h2>
             <div id = "SVR-container" class = "image"></div>
