@@ -218,7 +218,6 @@ strong {
   padding-bottom: 10em;
 }
 
-
 /* - Section margin
 --------------------------------------------------------------*/
 .margin-small {
@@ -643,7 +642,7 @@ a.text-hover:focus:after{
 .left-pattern::before {
   content: "";
   position: absolute;
-  margin-left: -40px;
+  margin-left: -50px;
   width: clamp(32px, -1.4px + 8.333vw, 40px);
   height: 3px;
   top: 40%;
