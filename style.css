@@ -115,6 +115,7 @@ CSS STRUCTURE:
 
 html {
   box-sizing: border-box;
+  scroll-padding-top: 5em;
 }
 
 body {
@@ -503,6 +504,8 @@ h7 {
   display: block;
 }
 
+
+
 /*----------------------------------------------*/
 /* 3 CONTENT ELEMENTS */
 /*----------------------------------------------*/
@@ -679,6 +682,15 @@ a.text-hover:focus:after{
   max-width: 100%;
   height: auto !important;
   z-index: -100;
+}
+
+/* 3.6 Href 
+------------------------------------------------------------- */
+:target::before {
+  content: '';
+  display: block;
+  height:      180px;
+  margin-top: -180px;
 }
 
 /*----------------------------------------------*/
