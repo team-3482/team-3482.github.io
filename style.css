@@ -1052,7 +1052,6 @@ button.filter-button.active {
   object-fit: cover; 
   height: 300px; 
   width: 400px; 
-  loading: lazy;
 } 
  
 #media video{ 
