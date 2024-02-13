@@ -126,6 +126,7 @@
                                 console.log('movie');
                                 const imgElement = document.createElement('video');
                                 imgElement.src = imageUrl;
+                                <!-- imgElement.data-src = imageUrl; -->
                                 imgElement.controls = true;
                                 document.getElementById(divName).appendChild(imgElement);
                               }
@@ -133,6 +134,7 @@
                                 console.log('image');
                                 const img = new Image();
                                 img.src = imageUrl;
+                                <!-- img.data-src = imageUrl; -->
                                   document.getElementById(divName).appendChild(img);
                               }
                           }
