@@ -996,6 +996,7 @@ button.filter-button.active {
 #board .swiper-arrow { 
   width: 50px; 
   height: 50px; 
+  margin-top: 90px;
 } 
  
 #board .swiper-arrow.border:hover { 
