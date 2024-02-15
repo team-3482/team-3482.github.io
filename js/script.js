@@ -7,10 +7,6 @@
   }); 
 
         $(document).ready(function() {   
-
-
-
-
              var swiper = new Swiper(".team-swiper", {
                 slidesPerView: 3,
                 spaceBetween: 30,

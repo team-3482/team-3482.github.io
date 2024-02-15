@@ -786,272 +786,279 @@ footer, .footer-bottom{
 
 .navbar-socials {
   color: white; 
-}
-
-.center {
-  text-align: center;    
-}
-
-
-@media (max-width: 999px) {
-
-  .social-links ul.navbar-nav {
-    display: none;
-  }
-}
-
-@media (min-width: 1399px) {
-  #header .navbar-expand-lg {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-  }
-
-  #header .navbar-expand-lg .navbar-collapse {
-    display: flex !important;
-    flex-basis: auto;
-  }
-
-  #header .navbar-expand-lg .navbar-toggler {
-    display: none;
-  }
-}
-
-/* 4.2 Intro
-------------------------------------------------------------- */
-#home .banner-content-main {
-  top: 33%; /* change this to move the "we are arrowbotics" text up or down to not block the image */
-  left: -1%;
-  z-index: 3;
-  width: 100%;
-  text-align: center;
-}
-
-.banner-content-robots {
-  top: 33%; /* change this to move the "Robots" text up or down to not block the image */
-  left: -1%;
-  z-index: 3;
-  width: 100%;
-  text-align: center;
-  text-shadow: 0 0 50px black;
-}
-
-.banner-content-sponsor {
-  top: 33%; /* change this to move the "Sponsors" text up or down to not block the image */
-  left: -1%;
-  z-index: 3;
-  width: 100%;
-  text-align: center;
-  text-shadow: 0 0 50px black;
-}
-
-.banner-content-media {
-  top: 42%; /* change this to move the "Media" text up or down to not block the image */
-  left: 25%;
-  z-index: 3;
-  width: 70%;
-  text-align: center;
-  text-shadow: 0 0 50px black;
-}
-
-@media (max-width: 1399px) {
-  #home .banner-content {
-    left: 10%;
-  }
-}
-
-@media (max-width: 699px) {
-  #home img.banner-image {
-    width: 100%;
-    height: 650px;
-    object-fit: cover;
-  }
-
- .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-}
-
-/* 4.3 About
-------------------------------------------------------------- */
-#about p {
-  font-size: 1.2em;
-}
-
-/* 4.4 Our Works
-------------------------------------------------------------- */
-
-
-button.filter-button.active {
-  color: var(--primary-color);
-}
-
-.projects-isotope button:hover,
-.projects-isotope button:focus {
-  color: var(--primary-color);
-  text-shadow: 0 0 50px var(--primary-color);
-}
-
-#projects .projects-content img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  cursor: pointer;
-}
-
-.robot-button {
-  margin: auto;
-  width: 175px;
-  height: 40px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 4em;
-  background-color: black;
-  border: 2px solid var(--primary-color);
-  color: white; 
-  border-radius: 10px;
-}
-
-
-/* 4.5 Our Services
-------------------------------------------------------------- */
-@media (max-width: 767px) {
-  section#our-services {
-    height: 800px !important;
-  }
-}
-
-.division-icons {
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  width: 27%;
-  margin: 5px;
-}
-
-/* 4.6 Brand Collections
-------------------------------------------------------------- */
-#sponsors .brand-item 
-{
-  display: flex;
-  justify-content: center;
-  padding: 50px 0;
-  transition: 0.9s ease-in-out;
-}
-
-#sponsors .brand-item:hover {
-  box-shadow: 0 0 30px black;
-}
-
-/* 4.7 Our Team
-------------------------------------------------------------- */
-.team-member ul.social-links {
-  top: 0;
-}
-
-.social-links {
-  color: #fff;
-}
-
-.team-member ul li {
-  width: 30px;
-  padding: 5px;
-  transform: rotatey(-90deg) perspective(100px);
-  transform-origin: left;
-  cursor: pointer;
-  transition: .5s ease-in-out;
-  background-color: var(--light-color);
-}
-
-.team-member ul li:first-of-type {
-  transition-delay: .3s;
-}
-
-.team-member ul li:nth-of-type(2) {
-  transition-delay: 0.6s;
-}
-
-.team-member ul li:nth-of-type(3) {
-  transition-delay: 0.9s;
-}
-
-.team-member ul li:last-of-type {
-  transition-delay: 1.3s;
-}
-
-.team-member:hover ul li {
-  transform: rotatey(0deg);
-}
-
-#board .swiper-arrow {
-  width: 50px;
-  height: 50px;
-}
-
-#board .swiper-arrow.border:hover {
-  border-color: var(--dark-color) !important;
-}
-
-/* 4.9 Our Achievement
-------------------------------------------------------------- */
-.stats-title {
-  text-align: center;
-  margin-bottom: 1.5em;
-}
-
-.counter-number h4.timer {
-  font-size: 6.4em;
-  color: var(--gray-color-400);
-  transition: 0.5s ease-in-out;
-}
-
-.counter-number h4:hover {
-  color: var(--primary-color);
-  text-shadow: 0 0 50px var(--primary-color);
-}
-
-
-/*--------------------------------------------------------------
-  Services page style
-  --------------------------------------------------------------*/
-  iconify-icon.services-icon {
-    font-size: 80px;
-    color: var(--accent-color);
-    transition: all 0.5s ease-in;
-  }
+} 
  
-/* Media things
- ------------------------------------*/
-#media .image {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  /* padding: 10px 0; */
-  gap: 10px;
-  transition: 0.9s ease-in-out;
-}
-
-#media .banner-title {
-  font-size: 3em;
-  font-weight: 400;
-  letter-spacing: 1px;
-  padding-left: 0px;
-}
-
-#media img{
-  object-fit: cover;
-  height: 300px;
-  width: 400px;
-}
-
-#media video{
-  object-fit: cover;
-  height: 300px;
-  width: 400px;
-}
+ 
+.navbar-socials { 
+  color: white;  
+} 
+ 
+.center { 
+  margin: auto;     
+} 
+ 
+ 
+@media (max-width: 999px) { 
+ 
+  .social-links ul.navbar-nav { 
+    display: none; 
+  } 
+} 
+ 
+@media (min-width: 1399px) { 
+  #header .navbar-expand-lg { 
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    justify-content: flex-start; 
+  } 
+ 
+  #header .navbar-expand-lg .navbar-collapse { 
+    display: flex !important; 
+    flex-basis: auto; 
+  } 
+ 
+  #header .navbar-expand-lg .navbar-toggler { 
+    display: none; 
+  } 
+} 
+ 
+/* 4.2 Intro 
+------------------------------------------------------------- */ 
+#home .banner-content-main { 
+  top: 33%; /* change this to move the "we are arrowbotics" text up or down to not block the image */ 
+  left: -1%; 
+  z-index: 3; 
+  width: 100%; 
+  text-align: center; 
+} 
+ 
+.banner-content-robots { 
+  top: 33%; /* change this to move the "Robots" text up or down to not block the image */ 
+  left: -1%; 
+  z-index: 3; 
+  width: 100%; 
+  text-align: center; 
+  text-shadow: 0 0 50px black; 
+} 
+ 
+.banner-content-sponsor { 
+  top: 33%; /* change this to move the "Sponsors" text up or down to not block the image */ 
+  left: -1%; 
+  z-index: 3; 
+  width: 100%; 
+  text-align: center; 
+  text-shadow: 0 0 50px black; 
+} 
+ 
+.banner-content-media { 
+  top: 42%; /* change this to move the "Media" text up or down to not block the image */ 
+  left: 25%; 
+  z-index: 3; 
+  width: 70%; 
+  text-align: center; 
+  text-shadow: 0 0 50px black; 
+} 
+ 
+@media (max-width: 1399px) { 
+  #home .banner-content { 
+    left: 10%; 
+  } 
+} 
+ 
+@media (max-width: 699px) { 
+  #home img.banner-image { 
+    width: 100%; 
+    height: 650px; 
+    object-fit: cover; 
+  } 
+ 
+ .center { 
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto; 
+  width: 50%; 
+} 
+ 
+} 
+ 
+/* 4.3 About 
+------------------------------------------------------------- */ 
+#about p { 
+  font-size: 1.2em; 
+} 
+ 
+/* 4.4 Our Works 
+------------------------------------------------------------- */ 
+ 
+ 
+button.filter-button.active { 
+  color: var(--primary-color); 
+} 
+ 
+.projects-isotope button:hover, 
+.projects-isotope button:focus { 
+  color: var(--primary-color); 
+  text-shadow: 0 0 50px var(--primary-color); 
+} 
+ 
+#projects .projects-content img { 
+  width: 100%; 
+  height: 300px; 
+  object-fit: cover; 
+  cursor: pointer; 
+} 
+ 
+.robot-button { 
+  margin: auto; 
+  width: 175px; 
+  height: 40px; 
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto; 
+  margin-bottom: 4em; 
+  background-color: black; 
+  border: 2px solid var(--primary-color); 
+  color: white;  
+  border-radius: 10px; 
+} 
+ 
+ 
+/* 4.5 Our Services 
+------------------------------------------------------------- */ 
+@media (max-width: 767px) { 
+  section#our-services { 
+    height: 800px !important; 
+  } 
+} 
+ 
+.division-icons { 
+  color: white; 
+  display: flex; 
+  justify-content: space-between; 
+  width: 27%; 
+  margin: 5px; 
+} 
+ 
+/* 4.6 Brand Collections 
+------------------------------------------------------------- */ 
+#sponsors .brand-item  
+{ 
+  display: flex; 
+  justify-content: center; 
+  padding: 50px 0; 
+  transition: 0.9s ease-in-out; 
+} 
+ 
+#sponsors .brand-item:hover { 
+  box-shadow: 0 0 30px black; 
+} 
+ 
+/* 4.7 Our Team 
+------------------------------------------------------------- */ 
+.team-member ul.social-links { 
+  top: 0; 
+} 
+ 
+.social-links { 
+  color: #fff; 
+} 
+ 
+.team-member ul li { 
+  width: 30px; 
+  padding: 5px; 
+  transform: rotatey(-90deg) perspective(100px); 
+  transform-origin: left; 
+  cursor: pointer; 
+  transition: .5s ease-in-out; 
+  background-color: var(--light-color); 
+} 
+ 
+.team-member ul li:first-of-type { 
+  transition-delay: .3s; 
+} 
+ 
+.team-member ul li:nth-of-type(2) { 
+  transition-delay: 0.6s; 
+} 
+ 
+.team-member ul li:nth-of-type(3) { 
+  transition-delay: 0.9s; 
+} 
+ 
+.team-member ul li:last-of-type { 
+  transition-delay: 1.3s; 
+} 
+ 
+.team-member:hover ul li { 
+  transform: rotatey(0deg); 
+} 
+ 
+#board .swiper-arrow { 
+  width: 50px; 
+  height: 50px; 
+} 
+ 
+#board .swiper-arrow.border:hover { 
+  border-color: var(--dark-color) !important; 
+} 
+ 
+/* 4.9 Our Achievement 
+------------------------------------------------------------- */ 
+.stats-title { 
+  text-align: center; 
+  margin-bottom: 1.5em; 
+} 
+ 
+.counter-number h4.timer { 
+  font-size: 6.4em; 
+  color: var(--gray-color-400); 
+  transition: 0.5s ease-in-out; 
+} 
+ 
+.counter-number h4:hover { 
+  color: var(--primary-color); 
+  text-shadow: 0 0 50px var(--primary-color); 
+} 
+ 
+ 
+/*-------------------------------------------------------------- 
+  Services page style 
+  --------------------------------------------------------------*/ 
+  iconify-icon.services-icon { 
+    font-size: 80px; 
+    color: var(--accent-color); 
+    transition: all 0.5s ease-in; 
+  } 
+  
+/* Media things 
+ ------------------------------------*/ 
+#media .image { 
+  display: flex; 
+  flex-wrap: wrap; 
+  justify-content: center; 
+  /* padding: 10px 0; */ 
+  gap: 10px; 
+  transition: 0.9s ease-in-out; 
+} 
+ 
+#media .banner-title { 
+  font-size: 3em; 
+  font-weight: 400; 
+  letter-spacing: 1px; 
+  padding-left: 0px; 
+} 
+ 
+#media img{ 
+  object-fit: cover; 
+  height: 300px; 
+  width: 400px; 
+  loading: lazy;
+} 
+ 
+#media video{ 
+  object-fit: cover; 
+  height: 300px; 
+  width: 400px; 
+} 
+ 
 
