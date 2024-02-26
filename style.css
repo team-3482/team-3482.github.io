@@ -1040,6 +1040,7 @@ button.filter-button.active {
   /* padding: 10px 0; */ 
   gap: 10px; 
   transition: 0.9s ease-in-out; 
+  /* background-image: url("/css/ajax-loader.gif"); */
 } 
  
 #media .banner-title { 
@@ -1053,8 +1054,20 @@ button.filter-button.active {
   object-fit: cover; 
   height: 300px; 
   width: 400px; 
-  loading: lazy;
+  background-image: url("media/loading.gif");
+  background-size: 100% 100%;
+
 } 
+#media img:hover{
+    color: #424242; 
+  -webkit-transition: all .3s ease-in;
+  -moz-transition: all .3s ease-in;
+  -ms-transition: all .3s ease-in;
+  -o-transition: all .3s ease-in;
+  transition: all .3s ease-in;
+  opacity: 1;
+  transform: scale(1.15);
+}
  
 #media video{ 
   object-fit: cover; 
