@@ -1058,16 +1058,16 @@ button.filter-button.active {
   background-size: 100% 100%;
 
 } 
-#media img:hover{
-    color: #424242; 
-  -webkit-transition: all .3s ease-in;
-  -moz-transition: all .3s ease-in;
-  -ms-transition: all .3s ease-in;
-  -o-transition: all .3s ease-in;
-  transition: all .3s ease-in;
-  opacity: 1;
-  transform: scale(1.15);
-}
+/* #media img:hover{ */
+/*     color: #424242;  */
+/*   -webkit-transition: all .3s ease-in; */
+/*   -moz-transition: all .3s ease-in; */
+/*   -ms-transition: all .3s ease-in; */
+/*   -o-transition: all .3s ease-in; */
+/*   transition: all .3s ease-in; */
+/*   opacity: 1; */
+/*   transform: scale(1.15); */
+/* } */
  
 #media video{ 
   object-fit: cover; 
