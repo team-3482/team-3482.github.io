@@ -837,8 +837,7 @@ footer, .footer-bottom{
   left: -1%; 
   z-index: 3; 
   width: 100%; 
-  text-align: center; 
-  text-shadow: 0 0 50px black; 
+  text-align: center;
 } 
  
 .banner-content-sponsor { 
@@ -847,7 +846,6 @@ footer, .footer-bottom{
   z-index: 3; 
   width: 100%; 
   text-align: center; 
-  text-shadow: 0 0 50px black; 
 } 
  
 .banner-content-media { 
@@ -856,7 +854,6 @@ footer, .footer-bottom{
   z-index: 3; 
   width: 70%; 
   text-align: center; 
-  text-shadow: 0 0 50px black; 
 } 
  
 @media (max-width: 1399px) { 
