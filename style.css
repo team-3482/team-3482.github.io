@@ -825,7 +825,7 @@ footer,
 /* 4.2 Intro 
 ------------------------------------------------------------- */
 #home .banner-content-main {
-  top: 38%; /* change this to move the "we are arrowbotics" text up or down to not block the image */
+  top: 48%; /* change this to move the "we are arrowbotics" text up or down to not block the image */
   left: -1%;
   z-index: 3;
   width: 100%;
