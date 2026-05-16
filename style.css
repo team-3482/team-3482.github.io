@@ -1079,4 +1079,6 @@ iconify-icon.services-icon {
  for divs in general
   --------------------------------------------------------------*/
 
- 
+#donate p {
+font-size: 1.2em;
+}
