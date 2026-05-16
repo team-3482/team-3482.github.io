@@ -941,14 +941,19 @@ button.filter-button.active {
 #sponsors .brand-item {
   display: flex;
   justify-content: center;
-  padding: 50px 0;
-  transition: 0.9s ease-in-out;
+  align-items: center;
+  height: 200px; /* makes all boxes the same height */
+  padding: 20px;
 }
 
-#sponsors .brand-item:hover {
-  box-shadow: 0 0 30px black;
+#sponsors .brand-item img {
+  max-width: 200px;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
 }
-
 /* 4.7 Our Team 
 ------------------------------------------------------------- */
 .team-member ul.social-links {
@@ -1069,3 +1074,9 @@ iconify-icon.services-icon {
   width: 400px;
 }
 
+
+/*-------------------------------------------------------------- 
+ for divs in general
+  --------------------------------------------------------------*/
+
+ 
