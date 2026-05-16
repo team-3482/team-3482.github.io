@@ -1,0 +1,203 @@
+// for making everything easier to read, i hate having to go thru the long ass header and footer every time
+(function injectHeadAssets() {
+  if (document.querySelector('[data-site-assets]')) return;
+  const assets = document.createDocumentFragment();
+
+  const metas = [
+    { charset: 'utf-8' },
+    { 'http-equiv': 'X-UA-Compatible', content: 'IE=edge' },
+    { name: 'viewport', content: 'width=device-width, initial-scale=1.0' },
+    { name: 'format-detection', content: 'telephone=no' },
+    { name: 'apple-mobile-web-app-capable', content: 'yes' },
+    { name: 'keywords', content: '3482, Arrowbotics, Westmont Robotics' },
+    { name: 'description', content: 'Homepage of Arrowbotics 3482, from Westmont High School' },
+    { property: 'og:image', content: 'media/icon.png' },
+    { name: 'theme-color', content: '#dd3125' },
+  ];
+
+  metas.forEach(attrs => {
+    const meta = document.createElement('meta');
+    Object.entries(attrs).forEach(([k, v]) => meta.setAttribute(k, v));
+    assets.appendChild(meta);
+  });
+
+  const links = [
+    { rel: 'stylesheet', href: 'css/bootstrap.min.css' },
+    { rel: 'stylesheet', href: 'style.css' },
+    { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css' },
+    { rel: 'stylesheet', href: 'aos/aos.css' },
+    { rel: 'stylesheet', href: 'css/date-time-picker-component.min.css' },
+    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+    { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Oswald:wght@300;400;500;600;700&display=swap' },
+    { rel: 'icon', type: 'image/png', href: 'media/icon.png' },
+  ];
+
+  links.forEach(attrs => {
+    const link = document.createElement('link');
+    Object.entries(attrs).forEach(([k, v]) => link.setAttribute(k, v));
+    assets.appendChild(link);
+  });
+
+  const marker = document.createElement('meta');
+  marker.setAttribute('data-site-assets', 'true');
+  assets.appendChild(marker);
+
+  document.head.appendChild(assets);
+
+
+  const earlyScripts = [
+    { src: 'https://kit.fontawesome.com/2869b3acde.js', crossorigin: 'anonymous' },
+    { src: 'js/modernizr.js' },
+  ];
+
+  earlyScripts.forEach(attrs => {
+    const script = document.createElement('script');
+    Object.entries(attrs).forEach(([k, v]) => script.setAttribute(k, v));
+    document.head.appendChild(script);
+  });
+})();
+
+
+class SiteHeader extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+      <header id="header" class="site-header position-absolute">
+        <nav id="header-nav" class="navbar bg-black navbar-expand-lg container-fluid position-fixed">
+          <div class="container-lg">
+            <a class="navbar-brand" href="index.html">
+              <img src="media/icon.png" class="logo">
+            </a>
+            <button class="navbar-toggler d-flex d-lg-none order-3 p-2 shadow-none"
+                    type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              <svg class="navbar-icon">
+                <use xlink:href="#navbar-icon"></use>
+              </svg>
+            </button>
+            <button class="navbar-toggler d-flex d-lg-none order-3 p-2 shadow-none"
+                    type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fa-solid fa-bars fa-lg" style="color: #ffffff;"></i>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="bdNavbar" aria-labelledby="bdNavbarOffcanvasLabel">
+              <div class="offcanvas-header px-4 pb-0">
+                <button type="button" class="btn-close btn-close-black" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul id="navbar" class="navbar-nav font-abzero text-uppercase justify-content-lg-center justify-content-md-end align-items-center flex-grow-1  text-hover">
+                  <li class="nav-item me-5">
+                    <a class="nav-link light text-uppercase active p-0" href="../index.html">Home</a>
+                  </li>
+                  <li class="nav-item me-5">
+                    <a class="nav-link light text-uppercase p-0" href="../index.html#about">About</a>
+                  </li>
+                  <li class="nav-item me-5">
+                    <a class="nav-link light text-uppercase p-0" href="../sponsors.html">Sponsors</a>
+                  </li>
+                  <li class="nav-item me-5">
+                    <a class="nav-link light text-uppercase p-0" href="../index.html#robots">Robots</a>
+                  </li>
+                  <li class="nav-item me-5">
+                    <a class="nav-link light text-uppercase p-0" href="#board">Board</a>
+                  </li>
+                  <li class="nav-item me-5">
+                    <a class="nav-link light text-uppercase p-0" href="../media.html">Media</a>
+                  </li>
+                  <li class="nav-item me-5">
+                    <a class="nav-link light text-uppercase p-0" href="../dono.html">Donate</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol xmlns="http://www.w3.org/2000/svg" id="icon-arrow-left" viewBox="0 0 15 15">
+          <path fill="currentColor" fill-rule="evenodd" d="m2.707 8l3.147 3.146l-.708.707L.793 7.5l4.353-4.354l.708.708L2.707 7H14v1H2.707Z" clip-rule="evenodd" />
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" id="icon-arrow-right" viewBox="0 0 15 15">
+          <path fill="currentColor" fill-rule="evenodd" d="M9.854 3.146L14.207 7.5l-4.353 4.354l-.708-.708L12.293 8H1V7h11.293L9.146 3.854l.708-.708Z" clip-rule="evenodd" />
+        </symbol>
+      </svg>
+    `;
+  }
+}
+
+
+class SiteFooter extends HTMLElement {
+  connectedCallback() {
+    this.innerHTML = `
+      <footer id="footer" class="overflow-hidden padding-small">
+        <div class="container" data-aos="fade-up" data-aos-duration="2000">
+          <div class="row d-flex flex-wrap justify-content-between">
+            <div class="col-lg-3 col-md-0 col-sm-0"></div>
+            <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
+              <div class="footer-menu">
+                <img src="media/icon-big.png" alt="footer logo" class="pb-4">
+                <p>Arrowbotics<br>FRC 3482<br>Westmont High School</p>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-6 col-sm-6 pb-3">
+              <div class="footer-menu">
+                <ul class="menu-list list-unstyled">
+                  <li class="pb-2 center"><strong>Contact</strong></li>
+                  <li class="pb-2">4805 Westmont Ave, Campbell, CA 95008</li>
+                  <li class="pb-2">+1 (408) 6263-406</li>
+                  <li class="pb-2">
+                    <a href="mailto:">team3482@gmail.com</a>
+                  </li>
+                  <div class="social-media footer-socials lg-4" style="color:black;">
+                    <a href="https://www.instagram.com/team_3482/" target="_blank"><i class='fab fa-instagram'></i></a>
+                    <a href="https://github.com/team-3482" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.youtube.com/@arrowbotics5748" target="_blank"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/Team3482/" target="_blank"><i class="fab fa-facebook"></i></a>
+                  </div>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-3 col-md-0 col-sm-0"></div>
+          </div>
+        </div>
+      </footer>
+
+      <div class="footer-bottom d-flex flex-wrap justify-content-between border-top pt-3">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-6">
+              <p>©<span id="copyright"> year </span> Arrowbotics</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+
+    document.getElementById('copyright').innerHTML = new Date().getFullYear();
+
+    // Bottom scripts — injected once
+    if (document.querySelector('[data-site-scripts]')) return;
+    const scripts = [
+      'js/jquery-1.11.0.min.js',
+      'https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js',
+      'aos/aos.js',
+      'js/bootstrap.bundle.min.js',
+      'js/plugins.js',
+      'js/script.js',
+      'https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js',
+    ];
+
+    scripts.forEach(src => {
+      const script = document.createElement('script');
+      script.src = src;
+      document.body.appendChild(script);
+    });
+
+    const marker = document.createElement('meta');
+    marker.setAttribute('data-site-scripts', 'true');
+    document.head.appendChild(marker);
+  }
+}
+
+
+customElements.define('site-header', SiteHeader);
+customElements.define('site-footer', SiteFooter);
