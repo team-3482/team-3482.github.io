@@ -90,79 +90,51 @@
         </div>
       </nav>
     </header>
-    <section id="home">
-      <div class="image-holder position-relative">
-        <img src="media/balance.jpg" alt="banner" class="banner-image" width="100%">
-      </div>
-      <div class="container-lg">
-        <div class="banner-content-sponsor position-absolute" data-aos="fade-up">
-          <h1 class="banner-title light text-uppercase fw-bold">Help Us Succeed</h1>
-        </div>
 
-        <div class="banner-content-main position-absolute" data-aos="fade-up">
-          <h7 class="light"> Arrowbotics cannot succeed without the generous sponsorship of grants, companies, and individuals.</h7>
-        </div>
+    <!--so the thing stops overflowing, only scoped here because i feel like it would mess w the other h7 uses in the site.-->
+    <style>
+      #home .banner-content-main h7 {
+      font-size: clamp(2rem, -0.875rem + 8.333vw, 3.9rem);
+      font-weight: 900;
+      }
+    </style>
+    <section id="home">
+      <div class="image-holder position-relative overflow:-hidden">
+        <img src="media/group_2024.jpg" alt="banner" class="banner-image" width="100%">
         
-      </div>
+
+        <div class="container-lg">
+          <div class="banner-content-sponsor position-absolute" data-aos="fade-up">
+            <h1 class="banner-title light text-uppercase fw-bold">Help Us Succeed</h1>
+          </div>
+
+          <div class="banner-content-main position-absolute" data-aos="fade-up">
+            <h7 class="light"> Arrowbotics cannot succeed without the generous sponsorship of grants, companies, and individuals.</h7>
+          </div>
+        
+        </div>
       
-      <section id="sponsors" class="padding-large overflow-hidden">
-        <div class="container" data-aos="fade-up" data-aos-duration="2000">
-          <div class="section-header">
-            <h2 class="text-uppercase mb-3 left-pattern">Sponsors</h2>
-            <h3 class="text-uppercase">Our 2026 Sponsors</h3>
-          </div><br><br><br>
-          <h1 class="banner-title" style="color:Gold;">Gold tier<h1>
-              <div class="row justify-content-between">
-                <div class="col-lg-3 pb-3">
-                  <div class="brand-item bg-gray-200">
-                    <a href="https://www.qualcomm.com/">
-                      <img src="media/sponsors/qualcomm.png" alt="Qualcomm">
-                    </a>
-                  </div>
-                </div>
-                 <div class="col-lg-3 pb-3">
-                  <div class="brand-item bg-gray-200">
-                    <a href="https://ghaasfoundation.org/content/ghf/en/home.html">
-                      <img src="media/sponsors/haas.png" alt="Haas">
-                    </a>
-                  </div>
-                </div>            
-                 <div class="col-lg-3 pb-3">
-                  <div class="brand-item bg-gray-200">
-                    <a href="https://ghaasfoundation.org/content/ghf/en/home.html">
-                      <img src="media/sponsors/fabworks.png" alt="fabworks">
-                    </a>
-                  </div>
-                </div>
-              </div>
-                <h1 class="banner-title" style="color:Silver;">Silver tier</h1>
-                  <div class="row justify-center">
-                    <div class="col-lg-3 pb-3">
-                      <div class="brand-item bg-gray-200">
-                        <a href="https://westmontptsa.org/">
-                          <img src="media/sponsors/wptsa.png" alt="WPTSA">
-                        </a>
-                      </div>
-                    </div>
-                    <div class="col-lg-3 pb-3">
-                      <div class="brand-item bg-gray-200">
-                        <a href="https://www.firstinspires.org/robotics/frc">
-                          <img src="media/sponsors/first.png" alt="First">
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-                <h1 class="banner-title" style="color:Chocolate;">Bronze tier</h1>
-                  <div class = "row justify-center">
-                    <div class="col-lg-3 pb-3">
-                      <div class="brand-item bg-gray-200">
-                        <a href="https://www.intuitive.com/en-us">
-                          <img src="media/sponsors/intuitive.png" alt="Intuitive">
-                        </a>
-                      </div>
-                    </div>
-                  </div>
-      </section>
+      </div>
+
+      
+    <section id="donate" class="overflow-hidden padding-large">
+      <div class="container">
+        <div class="row d-flex flex-wrap justify-content-between">
+          <div class="col-lg-6 col-md-12 col-sm-12 pb-3">
+            <div class="donate-content">
+              <h2 class="text-uppercase mb-3 left-pattern fw-bold">Donate</h2>
+              <p>We are a <strong>student-led organization</strong>, and all donations are tax-deductible. Your support helps us cover the costs of materials, registration fees, travel expenses, and more. Every contribution, big or small, makes a significant impact on our team's success.</p>
+              <a href="https://cuhsd.graystep.com/(S(rdpxoqvwknd24lmyhb2e0qeh))/Index.aspx#/780367/product/76231" target="_blank" class="btn btn-primary mt-3">Donate Now</a>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-12 col-sm-12 pb-3">
+            <div class="donate-image">
+              <img src="media/donate.jpg" alt="Donate Image" class="img-fluid rounded">
+            </div>
+          </div>
+    </section>
+
+
       <footer id="footer" class="overflow-hidden padding-large">
         <div class="container">
           <div class="row d-flex flex-wrap justify-content-between">
