@@ -994,7 +994,13 @@ button.filter-button.active {
   height: 50px;
   margin-top: 90px;
 }
-
+#board img[src$="/curtisma.jpg"],
+#board img[src$="/hudsonshum.jpg"] {
+  width: 100%;
+  aspect-ratio: 1068 / 1600;
+  object-fit: cover;
+  display: block;
+}
 #board .swiper-arrow.border:hover {
   border-color: var(--dark-color) !important;
 }
