@@ -1078,3 +1078,118 @@ iconify-icon.services-icon {
   height: 300px;
   width: 400px;
 }
+
+/* Donation page */
+.donation-page .donation-hero {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: clamp(32rem, 56.25vw, 50rem);
+  padding: 8rem 1.5rem 4rem;
+  overflow: hidden;
+}
+
+.donation-page #home .donation-hero > .banner-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.donation-page .donation-hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.donation-page .donation-hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 64rem;
+  text-align: center;
+  color: var(--light-color);
+}
+
+.donation-page .donation-hero-content h1 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  margin-bottom: 1.5rem;
+}
+
+.donation-page .donation-hero-content p {
+  font-family: var(--heading-font);
+  font-size: clamp(1.25rem, 3vw, 2.5rem);
+  font-weight: 500;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.donation-page #donate p {
+  font-size: 1.2em;
+}
+
+.donation-page .donate-checks {
+  padding: clamp(1.5rem, 3vw, 2.5rem);
+  background: #fafafa;
+  border: 1px solid #e5e5e5;
+  border-top: 3px solid var(--primary-color);
+  border-radius: 0.5rem;
+}
+
+.donation-page .donate-checks h3 {
+  margin-bottom: 1.75rem;
+  font-size: 1.75rem;
+}
+
+.donation-page .check-details {
+  display: grid;
+  gap: 1.5rem;
+  margin: 0 0 1.75rem;
+}
+
+.donation-page .check-details dt {
+  margin-bottom: 0.4rem;
+  color: #666;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.donation-page .check-details dd {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.donation-page .check-details address {
+  margin: 0;
+  font-style: normal;
+}
+
+.donation-page .check-memo {
+  padding: 0.75rem 1rem;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.25rem;
+  font-weight: 600;
+}
+
+.donation-page .check-contact {
+  padding-top: 1.25rem;
+  border-top: 1px solid #e5e5e5;
+}
+
+.donation-page #donate .check-contact p {
+  margin: 0 0 0.4rem;
+  font-size: 0.9rem;
+}
+
+.donation-page .check-contact a {
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  overflow-wrap: anywhere;
+}
