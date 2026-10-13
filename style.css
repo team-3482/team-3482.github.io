@@ -994,6 +994,10 @@ button.filter-button.active {
   height: 50px;
   margin-top: 90px;
 }
+#board .board-portrait-full-width {
+  width: 100%;
+}
+
 #board img[src$="/curtisma.jpg"],
 #board img[src$="/hudsonshum.jpg"] {
   width: 100%;
